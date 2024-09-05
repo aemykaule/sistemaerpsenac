@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/icomoon.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <header class="shadow p-3 mb-5 bg-body-tertiary rounded">
+            <nav class="navbar navbar-expand-lg justify-content-between">
+                <div class="container d-flex">
+                    <a class="navbar-brand text-warning d-flex" href="./indexhome.html">
+                        <img src="../../assets/img/Logo_Senac.png" alt="Logo do senac" width="80" height="40">
+                    </a>
+                    <div class="notifiacao">
+                        <a href="" class="btn border-0">
+                            <span class="icon-notification border-0"></span>
+                        </a>
+                    </div>
+                    <div class="container">
+                        <div class="input-group">
+                            <input type="text" class="form-control text-center border-0 shadow-sm" placeholder="Buscar por..."
+                                aria-label="Buscar por...">
+                            <div class="input-group-append d-flex">
+                                <button class="btn border-0 shadow-sm">
+                                    <span class="icon-search"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav px-4 justify-content-end">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Cadastros
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item text-primary"
+                                            href="./indexcadastrodoclienteFornecedor.html">Clientes e Fornecedores</a>
+                                    </li>
+                                    <li><a class="dropdown-item text-primary"
+                                            href="./indexcadastrodoproduto.html">Produtos</a></li>
+                                    <li><a class="dropdown-item text-primary"
+                                            href="./indexcadastrovendedores.html">Vendedores</a></li>
+                                    <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Suprimentos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item text-primary" href="./controledeestoque.html">Controle
+                                            de estoque</a></li>
+                                    <li><a class="dropdown-item text-primary" href="./indexpedidodecompra.html">Pedidos
+                                            de compra</a></li>
+                                    <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user">
+                        <a href="" class="btn border-0">
+                            <span class="icon-user border-0"></span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </header>
+    <main>
+        <div class="container-fluid mb-5">
+            <div class="container mt-5">
+                <h2 class="mb-4">Pedidos</h2>
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target="#addClientModal">Adicionar Cliente</button>
+                <table class="table table-bordered table-hover mt-5">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Pedido</th>
+                            <th scope="col">Fornecedor</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Cod. Produto</th>
+                            <th scope="col">Qtde</th>
+                            <th scope="col">Valor total</th>
+                            <th scope="col">Entrega</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PC-001</td>
+                            <td>Meu Timão</td>
+                            <td>01/06/24</td>
+                            <td>Camisa Corinthians 23/24</td>
+                            <td>Camisa torcedor, personalização: Yuri Alberto, 9.</td>
+                            <td>01726</td>
+                            <td>30</td>
+                            <td>R$ 10.499,98</td>
+                            <td>09/07/24</td>
+                        </tr>
+                        <tr>
+                            <td>PC-002</td>
+                            <td>Universo SCCP</td>
+                            <td>15/06/24</td>
+                            <td>Camisa retrô Corinthians 00/01</td>
+                            <td>Camisa retrô, personalização: Marcelinho, 10.</td>
+                            <td>01727</td>
+                            <td>25</td>
+                            <td>R$ 13.999,75</td>
+                            <td>19/07/24</td>
+                        </tr>
+                        <tr>
+                            <td>PC-003</td>
+                            <td>Nike</td>
+                            <td>20/06/24</td>
+                            <td>Chuteira Nike Mercurial Zoom</td>
+                            <td>Nike Air Zoom, tamanho 41, tecido: flyknit</td>
+                            <td>01728</td>
+                            <td>5</td>
+                            <td>R$ 5.999,95</td>
+                            <td>27/07/24</td>
+                        </tr>
+                        <tr>
+                            <td>PC-004</td>
+                            <td>Adidas</td>
+                            <td>28/06/24</td>
+                            <td>Tênis Adidas Forum Low</td>
+                            <td>Adidas Forum Low, tamanho 43 tecido: couro</td>
+                            <td>01729</td>
+                            <td>2</td>
+                            <td>R$ 1.399,98</td>
+                            <td>31/07/24</td>
+                        </tr>
+                        <tr>
+                            <td>PC-005</td>
+                            <td>Apple</td>
+                            <td>02/07/24</td>
+                            <td>Iphone 15 Pro MAX</td>
+                            <td>Iphone 15 Pro Max, Titânio, 1TB</td>
+                            <td>01730</td>
+                            <td>5</td>
+                            <td>R$ 57.000,00</td>
+                            <td>30/07/24</td>
+                        </tr>
+                        <tr>
+                            <td>PC-006</td>
+                            <td>Centauro</td>
+                            <td>12/07/24</td>
+                            <td>Moletom VANS</td>
+                            <td>Moletom Vans, Preto, Tamanho GG</td>
+                            <td>01731</td>
+                            <td>15</td>
+                            <td>R$ 5.999,85</td>
+                            <td>30/07/24</td>
+                        </tr>
+                        <tr>
+                            <td>PC-007</td>
+                            <td>Farfetch</td>
+                            <td>26/07/24</td>
+                            <td>Casaco Balenciaga</td>
+                            <td>Casaco Balenciaga, Tamanho GG</td>
+                            <td>01732</td>
+                            <td>10</td>
+                            <td>R$ 258.060,00</td>
+                            <td>30/08/24</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer class="p-5 bg-primary mt-5">
+        <div class="text-white">
+            <p class="mb-5">Rua das Inovações, nº 2023, Cidade Futura, Terra Nova</p>
+            <p class="mb-5">(55) 1234-5678</p>
+            <p class="mb-5">tecnicoinformatica@senac.com</p>
+            <hr class="text-white mt-5">
+            <p class="text-white text-center justify-content-center">@Copyright All Rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../../src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>

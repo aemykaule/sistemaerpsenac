@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo{
+    width: 5rem;
+    height: 3rem;
+}
+.card-left.bg-body-tertiary {
+    background-color: #d3dfe76b!important;
+}
+h1{
+    color: #024069;
+}
+h1.display-5 {
+    color: #005792; 
+}
+.carousel-item.active {
+    background-color: #005792;
+    height: 30rem;
+}
+.carousel-item{
+    background-color: #005792;
+    height: 30rem;
+}
+.quadrado{
+    background-color: #F78B1F;
+    width: 60rem; 
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.625rem;
+}
+.comecar{
+    background-color: #F78B1F;
+    width: auto;
+    height: 20rem;
+    margin-bottom: 5rem;
+}
+.btn-primary {
+    background-color: #005792; 
+    width: 10rem;
+    margin-top: 2rem;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #024069; 
+    border: none;
+}
+footer{
+    background-color: #005792;
+    height: 20rem;
+    margin-top: 10rem;
+}
+@media only screen and (max-width: 990px) {
+    h1{
+        font-size: 2rem;
+        line-height: 2.625rem;
+    }
+    .card-left.bg-body-tertiary {
+        background-color: #d3dfe76b!important;
+    }
+    #about .card-left {
+        flex-direction: row;
+        text-align: left;
+    }
+    #about .card-left p{
+        text-align: center;
+    }
+    #about .card-left h1 {
+        font-size: 2.5rem; 
+    }
+    #about .card-right img {
+        display: none;
+    }
+    footer{
+        height: 21.5rem;
+    }
+}

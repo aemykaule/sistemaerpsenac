@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/Home.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/icomoon.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <header class="shadow p-3 mb-5 bg-body-tertiary rounded">
+            <nav class="navbar navbar-expand-lg justify-content-between">
+                <div class="container d-flex">
+                    <a class="navbar-brand text-warning d-flex" href="./indexhome.html">
+                        <img src="../../assets/img/Logo_Senac.png" alt="Logo do senac" width="80" height="40">
+                    </a>
+                    <div class="notifiacao">
+                        <a href="" class="btn border-0">
+                            <span class="icon-notification border-0"></span>
+                        </a>
+                    </div>
+                    <div class="container">
+                        <div class="input-group">
+                            <input type="text" class="form-control text-center border-0 shadow-sm" placeholder="Buscar por..."
+                                aria-label="Buscar por...">
+                            <div class="input-group-append d-flex">
+                                <button class="btn border-0 shadow-sm">
+                                    <span class="icon-search"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <ul class="navbar-nav px-4 justify-content-end">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Cadastros
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item text-primary"
+                                            href="./indexcadastrodoclienteFornecedor.html">Clientes e Fornecedores</a>
+                                    </li>
+                                    <li><a class="dropdown-item text-primary"
+                                            href="./indexcadastrodoproduto.html">Produtos</a></li>
+                                    <li><a class="dropdown-item text-primary"
+                                            href="./indexcadastrovendedores.html">Vendedores</a></li>
+                                    <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Suprimentos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item text-primary" href="./controledeestoque.html">Controle
+                                            de estoque</a></li>
+                                    <li><a class="dropdown-item text-primary" href="./indexpedidodecompra.html">Pedidos
+                                            de compra</a></li>
+                                    <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user">
+                        <a href="" class="btn border-0">
+                            <span class="icon-user border-0"></span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </header>
+    <main class="">
+        <section id="carousel">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../../assets/img/banner.01.png" class="d-block w-100" alt="senac empresas paraná">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../assets/img/banner.02.png" class="d-block w-100" alt="elogiar faz bem">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../assets/img/banner.03.png" class="d-block w-100" alt="programa senac de gratuidade">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section id="services">
+            <div class="container">
+                <h2 class="text-center mt-4">Serviços</h2>
+                
+                <!-- Carrossel para dispositivos móveis -->
+                <div id="servicesCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-around">
+                                <a href="./indexlogin.html" class="icon-box bg-primary">
+                                    <span class="icon-dollar"></span>
+                                </a>
+                                <a class="icon-box bg-warning">
+                                    <span class="icon-cart"></span>
+                                </a>
+                                <a href="./controledeestoque.html" class="icon-box bg-primary ">
+                                    <span class="icon-caxa"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-around">
+                                <a href="./indexpedidodecompra.html" class="icon-box bg-warning">
+                                    <span class="icon-shopping-bag"></span>
+                                </a>
+                                <a href="./relatorio.html" class="icon-box bg-primary ">
+                                    <span class="icon-stats-bars2"></span>
+                                </a>
+                                <a class="icon-box bg-warning">
+                                    <span class="icon-profile"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-around">
+                                <a href="./indexcadastrodoclienteFornecedor.html" class="icon-box bg-primary ">
+                                    <span class="icon-truck"></span>
+                                </a>
+                                <a href="" class="icon-box bg-warning">
+                                    <span class="icon-calendar"></span>
+                                </a>
+                                <a class="icon-box bg-primary ">
+                                    <span class="icon-cog"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- Carrossel para dispositivos maiores -->
+                <div class="d-none d-md-flex flex-wrap justify-content-center icon-row">
+                    <div class="icon-row">
+                        <a href="./indexlogin.html" class="icon-box bg-primary">
+                            <span class="icon-dollar"></span>
+                        </a>
+                        <a class="icon-box bg-warning">
+                            <span class="icon-cart"></span>
+                        </a>
+                        <a href="./controledeestoque.html" class="icon-box bg-primary ">
+                            <span class="icon-caxa"></span>
+                        </a>
+                        <a href="./indexpedidodecompra.html" class="icon-box bg-warning">
+                            <span class="icon-shopping-bag"></span>
+                        </a>
+                        <a href="./relatorio.html" class="icon-box bg-primary ">
+                            <span class="icon-stats-bars2"></span>
+                        </a>
+                        <a class="icon-box bg-warning">
+                            <span class="icon-profile"></span>
+                        </a>
+                        <a href="./indexcadastrodoclienteFornecedor.html" class="icon-box bg-primary ">
+                            <span class="icon-truck"></span>
+                        </a>
+                        <a href="" class="icon-box bg-warning">
+                            <span class="icon-calendar"></span>
+                        </a>
+                        <a class="icon-box bg-primary ">
+                            <span class="icon-cog"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="history my-5">
+                <div class="text-center">
+                    <h2 class="mb-4">Histórico</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body shadow-lg">
+                                <a href="./indexcadastrodoproduto.html" class="mb-3">
+                                    <img src="../../assets/img/CadastroProdutos.png" class="" alt="Tela de Cadastro de Produtos" width="370" height="270">
+                                </a>
+                                <h5 class="card-title">Cadastro de Produtos</h5>
+                                <p class="card-text">Última alteração executada no dia 26/07/2024, 11:28</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body shadow-lg ">
+                                <a href="./relatorio.html" class="mb-3">
+                                    <img src="../../assets/img/Relatórtios.png" class="" alt="Tela de Relatórios" width="370" height="270">
+                                </a>
+                                <h5 class="card-title">Relatórios</h5>
+                                <p class="card-text">Última alteração executada no dia 26/07/2024, 11:28</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body shadow-lg">
+                                <a href="./controledeestoque.html" class="mb-3">
+                                    <img src="../../assets/img/Controle.png" class="" alt="Tela de Controle de Estoque" width="370" height="270">
+                                </a>
+                                <h5 class="card-title">Controle de estoque</h5>
+                                <p class="card-text">Última alteração executada no dia 26/07/2024, 11:28</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="p-5">
+        <div class="text-white">
+            <p class="mb-5">Rua das Inovações, nº 2023, Cidade Futura, Terra Nova</p>
+            <p class="mb-5">(55) 1234-5678</p>
+            <p class="mb-5">tecnicoinformatica@senac.com</p>
+            <hr class="text-white mt-5">
+            <p class="text-white text-center justify-content-center">@Copyright All Rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../../src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

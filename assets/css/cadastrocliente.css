@@ -1,0 +1,62 @@
+.borTop{
+    border-top: 1px solid #dee2e6 !important;
+}
+.borBottom{
+    border-bottom: 1px solid #dee2e6 !important;
+}   
+.footer{
+    position: absolute;
+    top: 230rem;
+    
+}
+@media only screen and (max-width: 990px) {
+    .form-control.w-25{
+        width: 200rem;
+        flex-direction: column;
+    }
+    .table.table-striped{
+        display: block;
+    }
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    th, td {
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    thead, tbody {
+        display: block;
+    }
+    
+    tbody tr {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+    td:nth-child(3),
+    td:nth-child(4),
+    td:nth-child(5),
+    th:nth-child(3),
+    th:nth-child(4),
+    th:nth-child(5){ 
+    display: none;
+    }
+    th:nth-child(2),
+    td:nth-child(2){
+        width: 60%;
+    }
+    th:nth-child(5), 
+    td:nth-child(5) {
+        width: 30%; 
+    }
+    
+    th:nth-child(6),
+    td:nth-child(6) {
+        width: 60%; 
+    }
+}

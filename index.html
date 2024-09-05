@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SistemaERP</title>
+    <link rel="stylesheet" href="./src/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/Principal.css">
+</head>
+<body>
+    <header class="shadow p-3 mb-5 bg-body-tertiary rounded">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand text-warning d-flex" href="#">
+                    <img class="logo" src="./assets/img/Logo_Senac.png" alt="Logo do senac" >
+                </a>
+                <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <ul class="navbar-nav px-4 justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link borTop text-primary" aria-current="page" href="#about">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link borTop text-primary" href="#services">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link borTop text-primary" href="#start">Começe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link borTop borBottom text-primary" aria-disabled="true" href="./src/pages/indexlogin.html">Entrar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <div class="card-left p-5 mb-4 bg-body-tertiary rounded-3">
+                <div class="container-fluid py-5">
+                    <div class="cards d-flex">
+                        <div class="card-left">
+                            <h1 class="display-5 fw-bold">Bem Vindo ao nosso sistema ERP!</h1>
+                            <p class="col-md-8 fs-4">“Transforme a gestão da sua<br>empresa com soluções integradas<br>e controle absoluto,<br>impulsionando seu crescimento<br>ao máximo.”</p></div>
+                        <div class="card-right">
+                            <img src="./assets/img/Untitled.png" alt="Mulher pensando em um sistema ERP" width="870" height="550">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-right"></div>
+        </section> 
+        <section id="services">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-around align-items-center">
+                            <div class="quadrado">
+                                <div class="text-center text-white p-4">
+                                    <span class="icon-caxa"></span>
+                                    <h3>CONTROLE DE ESTOQUE</h3>
+                                    <p>Essencial para equilibrar oferta e demanda, otimizando recursos e reduzindo custos operacionais.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-around align-items-center">
+                            <div class="quadrado">
+                                <div class="text-center text-white p-4">
+                                    <h3>RELATÓRIOS</h3>
+                                    <p>São documentos que consolidam informações financeiras, operacionais e estratégicas da empresa, essenciais para análise e tomada de decisão.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-around align-items-center">
+                            <div class="quadrado">
+                                <div class="text-center text-white p-4">
+                                    <h3>PEDIDOS DE COMPRA</h3>
+                                    <p>Solicitações de aquisição de produtos ou serviços, para manter operações e atender à demanda da empresa.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="vxisually-hidden"></span>
+                </button>
+            </div>
+        </section>
+        <section id="avaliations">
+            <div class="container my-5">
+                <div class="text-center">
+                    <h2 class="mb-4">AVALIAÇÕES</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <img src="./assets/img/man_01.jpg" class="rounded-circle" alt="Profile">
+                                </div>
+                                <h5 class="card-title">Alberto Carlos</h5>
+                                <p class="card-text">"O ERP é muito fácil de usar e aumentou nossa eficiência. Excelente suporte ao cliente!"</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <img src="./assets/img/woman_01.jpg" class="rounded-circle" alt="Profile">
+                                </div>
+                                <h5 class="card-title">Sandra Meirelles</h5>
+                                <p class="card-text">"Ótimo sistema, mas a personalização de relatórios poderia ser melhor. Recomendo!"</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <img src="./assets/img/woman_02.jpg" class="rounded-circle" alt="Profile">
+                                </div>
+                                <h5 class="card-title">Carmen Ramirez</h5>
+                                <p class="card-text">"O ERP transformou nossa gestão empresarial, facilitando todos os processos. Altamente recomendado!"</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="start">
+            <div class="comecar">
+                <div class="text-center p-5 mb-5">
+                    <div class="row">
+                        <div class="col-md-6 my-aut text-white mt-sm-5">
+                            <h2 class="font-weight-bold">Comece agora</h2>
+                            <p>Revolucione agora a gestão do seu negócio com nosso ERP!</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <a href="./src/pages/indexcadastro.html" class="btn btn-primary mb-3">CADASTRAR</a>
+                                <a href="./src/pages/indexlogin.html" class="btn btn-primary">ENTRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </section>          
+    </main>
+    <footer class="p-5">
+        <div class="text-white">
+            <p class="mb-5">Rua das Inovações, nº 2023, Cidade Futura, Terra Nova</p>
+            <p class="mb-5">(55) 1234-5678</p>
+            <p class="mb-5">tecnicoinformatica@senac.com</p>
+            <hr class="text-white mt-5">
+            <p class="text-white text-center justify-content-center">@Copyright All Rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
