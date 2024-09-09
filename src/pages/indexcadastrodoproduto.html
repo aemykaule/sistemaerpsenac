@@ -6,8 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CadastroProdutos</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/css/cadastrarvendedor.css">
-    <link rel="stylesheet" href="../../assets/css/icomoon.css">
+    <link rel="stylesheet" href="../../assets/css/CadastroDoProduto.css">
+    <link rel="stylesheet" href="../../assets/css/icomooon.css">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 </head>
 
 <body>
@@ -16,7 +27,7 @@
             <nav class="navbar navbar-expand-lg justify-content-between">
                 <div class="container d-flex">
                     <a class="navbar-brand text-warning d-flex" href="./indexhome.html">
-                        <img src="../../assets/img/Logo_Senac.png" alt="Logo do senac" width="80" height="40">
+                        <img class="logosenac" src="../../assets/img/Logo_Senac.png" alt="Logo do senac">
                     </a>
                     <div class="notifiacao">
                         <a href="" class="btn border-0">
@@ -34,7 +45,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="offcanvas"
+                    <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -87,121 +98,60 @@
     </header>
     <main>
         <div class="container mt-5">
-            <h2 class="text-center">Cadastro de Produtos</h2>
-            <div class="d-flex justify-content-between mb-3">
-                <div>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#exampleModal">Adicionar Produto</button>
-                    <button type="button" class="btn btn-secondary">Imprimir</button>
-                </div>
-                <input type="text" class="form-control w-25" placeholder="Pesquisar">
-            </div>
-            <table class="table table-striped">
-                <thead class="thead-dark">
+            <h2>Cadastro de Producto</h2>
+    
+            <!-- Botão de adicionar -->
+            <button id="addBtn" class="btn btn-primary mb-3">Adicionar Producto</button>
+    
+            <!-- Tabela -->
+            <table id="example" class="display table table-striped">
+                <thead>
                     <tr>
                         <th>Nome</th>
-                        <th>Código</th>
-                        <th>Tipo</th>
-                        <th>Preço</th>
-                        <th>Qtd.</th>
+                        <th>Idade</th>
+                        <th>CPF/CNPJ</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Caminhão Scania</td>
-                        <td>548.55541.4554.794</td>
-                        <td>Veículo</td>
-                        <td>987.000,00</td>
-                        <td>6</td>
+                        <td>Luiz</td>
+                        <td>15</td>
+                        <td>216.213.861-06</td>
+                        <td>
+                            <button class="btn border-0 btn-edit">
+                                <span class="icon-pencil"></span>
+                            </button>
+                            <button class="btn bORDER-0 btn-delete">
+                                <span class="icon-bin2"></span>
+                            </button>
+                        </td>
                     </tr>
-                </tbody>
-                <tbody>
                     <tr>
-                        <td>Caminhão Scania</td>
-                        <td>548.55541.4554.794</td>
-                        <td>Veículo</td>
-                        <td>987.000,00</td>
-                        <td>6</td>
+                        <td>Ana</td>
+                        <td>22</td>
+                        <td>216.213.861-06</td>
+                        <td>
+                            <button class="btn border-0 btn-edit">
+                                <span class="icon-pencil border-0"></span>
+                            </button>
+                            <button class="btn border-0 btn-delete">
+                                <span class="icon-bin2"></span>
+                            </button>
+                        </td>
                     </tr>
-                </tbody>
-                <tbody>
                     <tr>
-                        <td>Caminhão Scania</td>
-                        <td>548.55541.4554.794</td>
-                        <td>Veículo</td>
-                        <td>987.000,00</td>
-                        <td>6</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>Caminhão Scania</td>
-                        <td>548.55541.4554.794</td>
-                        <td>Veículo</td>
-                        <td>987.000,00</td>
-                        <td>6</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>Caminhão Scania</td>
-                        <td>548.55541.4554.794</td>
-                        <td>Veículo</td>
-                        <td>987.000,00</td>
-                        <td>6</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>Caminhão Scania</td>
-                        <td>548.55541.4554.794</td>
-                        <td>Veículo</td>
-                        <td>987.000,00</td>
-                        <td>6</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>Caminhão Scania</td>
-                        <td>548.55541.4554.794</td>
-                        <td>Veículo</td>
-                        <td>987.000,00</td>
-                        <td>6</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>Caminhão Scania</td>
-                        <td>548.55541.4554.794</td>
-                        <td>Veículo</td>
-                        <td>987.000,00</td>
-                        <td>6</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>Caminhão Scania</td>
-                        <td>548.55541.4554.794</td>
-                        <td>Veículo</td>
-                        <td>987.000,00</td>
-                        <td>6</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>Caminhão Scania</td>
-                        <td>548.55541.4554.794</td>
-                        <td>Veículo</td>
-                        <td>987.000,00</td>
-                        <td>6</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>Caminhão Scania</td>
-                        <td>548.55541.4554.794</td>
-                        <td>Veículo</td>
-                        <td>987.000,00</td>
-                        <td>6</td>
+                        <td>Ana</td>
+                        <td>22</td>
+                        <td>216.213.861-06</td>
+                        <td>
+                            <button class="btn border-0 btn-edit">
+                                <span class="icon-pencil border-0"></span>
+                            </button>
+                            <button class="btn border-0 btn-delete">
+                                <span class="icon-bin2"></span>
+                            </button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -273,7 +223,7 @@
             </div>
         </div>
     </main>
-    <footer class="p-5 mt-5 h-auto bg-primary">
+    <footer class="mt-5 p-5" style="height: 320px">
         <div class="text-white">
             <p class="mb-5">Rua das Inovações, nº 2023, Cidade Futura, Terra Nova</p>
             <p class="mb-5">(55) 1234-5678</p>
@@ -284,6 +234,8 @@
     </footer>
     <script src="../../src/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/datatables.min.js"></script>
+    <script src="../js/DataTest.js"></script>
 </body>
 
 </html>

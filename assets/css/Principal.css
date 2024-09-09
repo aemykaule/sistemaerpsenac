@@ -76,6 +76,7 @@ footer{
         display: none;
     }
     footer{
-        height: 21.5rem;
+        margin-bottom: 1rem;
+        width: 100%;
     }
 }

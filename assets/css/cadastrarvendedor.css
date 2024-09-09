@@ -7,6 +7,10 @@ html,
 body{
     height: 100%;
 }
+.logosenac{
+    width: 5rem;
+    height: 2.5rem;
+}
 .login-card {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 2rem;
@@ -16,6 +20,11 @@ body{
     max-width: 400px;
     height: 500px;
 }
+footer{
+    background-color: #005792;
+    height: 20rem;
+    margin-top: 10rem;
+}
 @media only screen and (max-width: 990px) {
     .borTop{
         border-top: 1px solid #dee2e6 !important;
@@ -23,9 +32,10 @@ body{
     .borBottom{
         border-bottom: 1px solid #dee2e6 !important;
     }   
-    .footer{
+    footer{
+        background-color: #005792;
         position: absolute;
-        top: 230rem;
-        background-color: #ecf1f5;
+        width: 100%;
+        margin-bottom: 1rem;
     }
 }

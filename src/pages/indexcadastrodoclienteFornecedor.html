@@ -9,85 +9,22 @@
     <link rel="stylesheet" href="../../assets/css/cadastrocliente.css">
     <link rel="stylesheet" href="../../assets/css/icomoon.css">
     <link rel="stylesheet" href="../../assets/css/icomooon.css">
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <header class="shadow p-3 mb-5 bg-body-tertiary rounded">
-            <nav class="navbar navbar-expand-lg justify-content-between">
-                <div class="container d-flex">
-                    <a class="navbar-brand text-warning d-flex" href="./indexhome.html">
-                        <img src="../../assets/img/Logo_Senac.png" alt="Logo do senac" width="80" height="40">
-                    </a>
-                    <div class="notifiacao">
-                        <a href="" class="btn border-0">
-                            <span class="icon-notification border-0"></span>
-                        </a>
-                    </div>
-                    <div class="container">
-                        <div class="input-group">
-                            <input type="text" class="form-control text-center border-0 shadow-sm"
-                                placeholder="Buscar por..." aria-label="Buscar por...">
-                            <div class="input-group-append d-flex">
-                                <button class="btn border-0 shadow-sm">
-                                    <span class="icon-search"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1"
-                        aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <ul class="navbar-nav px-4 justify-content-end">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Cadastros
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item text-primary"
-                                            href="./indexcadastrodoclienteFornecedor.html">Clientes e Fornecedores</a>
-                                    </li>
-                                    <li><a class="dropdown-item text-primary"
-                                            href="./indexcadastrodoproduto.html">Produtos</a></li>
-                                    <li><a class="dropdown-item text-primary"
-                                            href="./indexcadastrovendedores.html">Vendedores</a></li>
-                                    <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Suprimentos
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item text-primary" href="./controledeestoque.html">Controle
-                                            de estoque</a></li>
-                                    <li><a class="dropdown-item text-primary" href="./indexpedidodecompra.html">Pedidos
-                                            de compra</a></li>
-                                    <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="user">
-                        <a href="" class="btn border-0">
-                            <span class="icon-user border-0"></span>
-                        </a>
-                    </div>
-                </div>
-            </nav>
-        </header>
-    </header>
+    <header></header>
     <main>
         <div class="container mt-5">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -103,195 +40,102 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="client" role="tabpanel" aria-labelledby="client-tab">
                     <div class="container mt-5">
-                        <h2 class="text-center">Cadastro de Clientes</h2>
-                        <div class="d-flex justify-content-between mb-3">
-                            <div>
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#addClientModal">Adicionar Cliente</button>
-                                <button type="button" class="btn btn-secondary">Imprimir</button>
-                            </div>
-                            <input type="text" class="form-control w-25" placeholder="Pesquisar">
-                        </div>
-                        <table class="table table-striped">
-                            <thead class="thead-dark">
+                        <h2>Cadastro de Clientes</h2>
+                        <!-- Botão de adicionar -->
+                        <button id="addBtn" class="btn btn-primary mb-3">Adicionar Linha</button>
+                        <!-- Tabela -->
+                        <table id="example" class="display table table-striped">
+                            <thead>
                                 <tr>
                                     <th>Nome</th>
-                                    <th>Telefone</th>
-                                    <th>E-mail</th>
+                                    <th>Idade</th>
                                     <th>CPF/CNPJ</th>
-                                    <th>Setor</th>
-                                    <th>Infor</th>
+                                    <th>Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>João Silva</td>
-                                    <td>(11) 1234-5678</td>
-                                    <td>joaosilva45@gmail.com</td>
-                                    <td>123.154.697-15</td>
-                                    <td>RH</td>
-                                    <td><span class="icon-info"></span></td>
+                                    <td>Luiz</td>
+                                    <td>15</td>
+                                    <td>216.213.861-06</td>
+                                    <td>
+                                        <button class="btn border-0 btn-edit">
+                                            <span class="icon-pencil"></span>
+                                        </button>
+                                        <button class="btn bORDER-0 btn-delete">
+                                            <span class="icon-bin2"></span>
+                                        </button>
+                                    </td>
                                 </tr>
-                            </tbody>
-                            <tbody>
                                 <tr>
-                                    <td>João Silva</td>
-                                    <td>(11) 1234-5678</td>
-                                    <td>joaosilva45@gmail.com</td>
-                                    <td>123.154.697-15</td>
-                                    <td>RH</td>
-                                    <td><span class="icon-info"></span></td>
+                                    <td>Ana</td>
+                                    <td>22</td>
+                                    <td>216.213.861-06</td>
+                                    <td>
+                                        <button class="btn border-0 btn-edit">
+                                            <span class="icon-pencil border-0"></span>
+                                        </button>
+                                        <button class="btn border-0 btn-delete">
+                                            <span class="icon-bin2"></span>
+                                        </button>
+                                    </td>
                                 </tr>
-                            </tbody>
-                            <tbody>
                                 <tr>
-                                    <td>João Silva</td>
-                                    <td>(11) 1234-5678</td>
-                                    <td>joaosilva45@gmail.com</td>
-                                    <td>123.154.697-15</td>
-                                    <td>RH</td>
-                                    <td><span class="icon-info"></span></td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>João Silva</td>
-                                    <td>(11) 1234-5678</td>
-                                    <td>joaosilva45@gmail.com</td>
-                                    <td>123.154.697-15</td>
-                                    <td>RH</td>
-                                    <td><span class="icon-info"></span></td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>João Silva</td>
-                                    <td>(11) 1234-5678</td>
-                                    <td>joaosilva45@gmail.com</td>
-                                    <td>123.154.697-15</td>
-                                    <td>RH</td>
-                                    <td><span class="icon-info"></span></td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>João Silva</td>
-                                    <td>(11) 1234-5678</td>
-                                    <td>joaosilva45@gmail.com</td>
-                                    <td>123.154.697-15</td>
-                                    <td>RH</td>
-                                    <td><span class="icon-info"></span></td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>João Silva</td>
-                                    <td>(11) 1234-5678</td>
-                                    <td>joaosilva45@gmail.com</td>
-                                    <td>123.154.697-15</td>
-                                    <td>RH</td>
-                                    <td><span class="icon-info"></span></td>
+                                    <td>Ana</td>
+                                    <td>22</td>
+                                    <td>216.213.861-06</td>
+                                    <td>
+                                        <button class="btn border-0 btn-edit">
+                                            <span class="icon-pencil border-0"></span>
+                                        </button>
+                                        <button class="btn border-0 btn-delete">
+                                            <span class="icon-bin2"></span>
+                                        </button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="supplier" role="tabpanel" aria-labelledby="supplier-tab">
-                    <div class="container mt-5">
-                        <h2 class="text-center">Cadastro de Fornecedores</h2>
-                        <div class="d-flex justify-content-between mb-3">
-                            <div>
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#addClientModal">Adicionar Forn.</button>
-                                <button type="button" class="btn btn-secondary">Imprimir</button>
-                            </div>
-                            <input type="text" class="form-control w-25" placeholder="Pesquisar">
-                        </div>
-                        <table class="table table-striped">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>Telefone</th>
-                                    <th>E-mail</th>
-                                    <th>CPF/CNPJ</th>
-                                    <th>Setor</th>
-                                    <th>Infor</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>João Silva</td>
-                                    <td>(11) 1234-5678</td>
-                                    <td>joaosilva45@gmail.com</td>
-                                    <td>123.154.697-15</td>
-                                    <td>RH</td>
-                                    <td><span class="icon-info"></span></td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>João Silva</td>
-                                    <td>(11) 1234-5678</td>
-                                    <td>joaosilva45@gmail.com</td>
-                                    <td>123.154.697-15</td>
-                                    <td>RH</td>
-                                    <td><span class="icon-info"></span></td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>João Silva</td>
-                                    <td>(11) 1234-5678</td>
-                                    <td>joaosilva45@gmail.com</td>
-                                    <td>123.154.697-15</td>
-                                    <td>RH</td>
-                                    <td><span class="icon-info"></span></td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>João Silva</td>
-                                    <td>(11) 1234-5678</td>
-                                    <td>joaosilva45@gmail.com</td>
-                                    <td>123.154.697-15</td>
-                                    <td>RH</td>
-                                    <td><span class="icon-info"></span></td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>João Silva</td>
-                                    <td>(11) 1234-5678</td>
-                                    <td>joaosilva45@gmail.com</td>
-                                    <td>123.154.697-15</td>
-                                    <td>RH</td>
-                                    <td><span class="icon-info"></span></td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>João Silva</td>
-                                    <td>(11) 1234-5678</td>
-                                    <td>joaosilva45@gmail.com</td>
-                                    <td>123.154.697-15</td>
-                                    <td>RH</td>
-                                    <td><span class="icon-info"></span></td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>João Silva</td>
-                                    <td>(11) 1234-5678</td>
-                                    <td>joaosilva45@gmail.com</td>
-                                    <td>123.154.697-15</td>
-                                    <td>RH</td>
-                                    <td><span class="icon-info"></span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <script src="../js/DataTest.js"></script>
                 </div>
             </div>
+            <div class="tab-pane fade" id="supplier" role="tabpanel" aria-labelledby="supplier-tab">
+                <div class="container mt-5">
+                    <h2 class="text-center">Cadastro de Fornecedores</h2>
+                    <div class="d-flex justify-content-between mb-3">
+                        <div>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#addSupplierModal">Adicionar Forn.</button>
+                            <button type="button" class="btn btn-secondary">Imprimir</button>
+                        </div>
+                        <input type="text" class="form-control w-25" placeholder="Pesquisar">
+                    </div>
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Nome</th>
+                                <th>Telefone</th>
+                                <th>E-mail</th>
+                                <th>CPF/CNPJ</th>
+                                <th>Setor</th>
+                                <th>Infor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>João Silva</td>
+                                <td>(11) 1234-5678</td>
+                                <td>joaosilva45@gmail.com</td>
+                                <td>123.154.697-15</td>
+                                <td>RH</td>
+                                <td><span class="icon-info"></span></td>
+                            </tr>
+                            <!-- Mais linhas -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
         </div>
         <!-- Modal Adicionar Cliente -->
         <div class="modal fade" id="addClientModal" tabindex="-1" role="dialog" aria-labelledby="addClientModalLabel"
@@ -306,54 +150,7 @@
                     </div>
                     <div class="modal-body">
                         <form>
-                            <h6>INFORMAÇÕES BÁSICAS</h6>
-                            <div class="form-row">
-                                <div class="form-group col-md-10">
-                                    <label for="client-nome-completo">Nome completo</label>
-                                    <input type="text" class="form-control" id="client-nome-completo">
-                                </div>
-                                <div class="form-group col-md-10">
-                                    <label for="client-cpf-cnpj">CPF/CNPJ</label>
-                                    <input type="text" class="form-control" id="client-cpf-cnpj">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-10">
-                                    <label for="client-telefone">Telefone</label>
-                                    <input type="text" class="form-control" id="client-telefone">
-                                </div>
-                                <div class="form-group col-md-10">
-                                    <label for="client-email">E-mail</label>
-                                    <input type="email" class="form-control" id="client-email">
-                                </div>
-                                <div class="form-group col-md-10">
-                                    <label for="client-setor">Setor</label>
-                                    <input type="text" class="form-control" id="client-setor">
-                                </div>
-                            </div>
-                            <h6>ENDEREÇO</h6>
-                            <div class="form-row">
-                                <div class="form-group col-md-10">
-                                    <label for="client-endereco">Rua</label>
-                                    <input type="text" class="form-control" id="client-endereco">
-                                </div>
-                                <div class="form-group col-md-10">
-                                    <label for="client-bairro">Bairro</label>
-                                    <input type="text" class="form-control" id="client-bairro">
-                                </div>
-                                <div class="form-group col-md-10">
-                                    <label for="client-cidade">Cidade</label>
-                                    <input type="text" class="form-control" id="client-cidade">
-                                </div>
-                                <div class="form-group col-md-10">
-                                    <label for="client-estado">Estado</label>
-                                    <input type="text" class="form-control" id="client-estado">
-                                </div>
-                                <div class="form-group col-md-10">
-                                    <label for="client-cep">CEP</label>
-                                    <input type="text" class="form-control" id="client-cep">
-                                </div>
-                            </div>
+                            <!-- Formulário de cliente -->
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -376,54 +173,7 @@
                     </div>
                     <div class="modal-body">
                         <form>
-                            <h6>INFORMAÇÕES BÁSICAS</h6>
-                            <div class="form-row">
-                                <div class="form-group col-md-10">
-                                    <label for="supplier-nome-completo">Nome completo</label>
-                                    <input type="text" class="form-control" id="supplier-nome-completo">
-                                </div>
-                                <div class="form-group col-md-10">
-                                    <label for="supplier-cpf-cnpj">CPF/CNPJ</label>
-                                    <input type="text" class="form-control" id="supplier-cpf-cnpj">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-10">
-                                    <label for="supplier-telefone">Telefone</label>
-                                    <input type="text" class="form-control" id="supplier-telefone">
-                                </div>
-                                <div class="form-group col-md-10">
-                                    <label for="supplier-email">E-mail</label>
-                                    <input type="email" class="form-control" id="supplier-email">
-                                </div>
-                                <div class="form-group col-md-10">
-                                    <label for="supplier-setor">Setor</label>
-                                    <input type="text" class="form-control" id="supplier-setor">
-                                </div>
-                            </div>
-                            <h6>ENDEREÇO</h6>
-                            <div class="form-row">
-                                <div class="form-group col-md-10">
-                                    <label for="supplier-endereco">Rua</label>
-                                    <input type="text" class="form-control" id="supplier-endereco">
-                                </div>
-                                <div class="form-group col-md-10">
-                                    <label for="supplier-bairro">Bairro</label>
-                                    <input type="text" class="form-control" id="supplier-bairro">
-                                </div>
-                                <div class="form-group col-md-10">
-                                    <label for="supplier-cidade">Cidade</label>
-                                    <input type="text" class="form-control" id="supplier-cidade">
-                                </div>
-                                <div class="form-group col-md-10">
-                                    <label for="supplier-estado">Estado</label>
-                                    <input type="text" class="form-control" id="supplier-estado">
-                                </div>
-                                <div class="form-group col-md-10">
-                                    <label for="supplier-cep">CEP</label>
-                                    <input type="text" class="form-control" id="supplier-cep">
-                                </div>
-                            </div>
+                            <!-- Formulário de fornecedor -->
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -434,7 +184,7 @@
             </div>
         </div>
     </main>
-    <footer class="p-5 mt-5 h-auto bg-primary">
+    <footer class="mt-5 mb-4 p-5">
         <div class="text-white">
             <p class="mb-5">Rua das Inovações, nº 2023, Cidade Futura, Terra Nova</p>
             <p class="mb-5">(55) 1234-5678</p>
@@ -443,11 +193,11 @@
             <p class="text-white text-center justify-content-center">@Copyright All Rights reserved.</p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../../src/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 </body>
 
 </html>

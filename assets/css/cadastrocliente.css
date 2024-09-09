@@ -1,15 +1,19 @@
-.borTop{
-    border-top: 1px solid #dee2e6 !important;
-}
-.borBottom{
-    border-bottom: 1px solid #dee2e6 !important;
-}   
-.footer{
-    position: absolute;
-    top: 230rem;
-    
+.logosenac{
+    width: 5rem;
+    height: 2.5rem;
+}  
+footer{
+    background-color: #005792;
+    height: 20rem;
+    margin-top: 10rem;
 }
 @media only screen and (max-width: 990px) {
+    .borTop{
+        border-top: 1px solid #dee2e6 !important;
+    }
+    .borBottom{
+        border-bottom: 1px solid #dee2e6 !important;
+    } 
     .form-control.w-25{
         width: 200rem;
         flex-direction: column;
@@ -58,5 +62,11 @@
     th:nth-child(6),
     td:nth-child(6) {
         width: 60%; 
+    }
+    footer{
+        background-color: #005792;
+        position: absolute;
+        margin-bottom: 1rem;
+        width: 100%;
     }
 }
