@@ -25,81 +25,75 @@
 </head>
 
 <body>
-    <header>
-        <header class="shadow p-3 mb-5 bg-body-tertiary rounded">
-            <nav class="navbar navbar-expand-lg justify-content-between">
+    <header class="header shadow p-1 bg-body-tertiary rounded">
+        <nav class="navbar navbar-expand-lg justify-content-between">
+            <div class="container d-flex">
+                <a class="navbar-brand text-warning d-flex" href="./indexhome.html">
+                    <img class="logosenac" src="../../assets/img/Logo_Senac.png" alt="Logo do senac">
+                </a>
                 <div class="container d-flex">
-                    <a class="navbar-brand text-warning d-flex" href="./indexhome.html">
-                        <img class="logosenac" src="../../assets/img/Logo_Senac.png" alt="Logo do senac">
-                    </a>
-                    <div class="notifiacao">
-                        <a href="" class="btn border-0">
-                            <span class="icon-notification border-0"></span>
-                        </a>
-                    </div>
-                    <div class="container">
-                        <div class="input-group">
-                            <input type="text" class="form-control text-center border-0 shadow-sm"
-                                placeholder="Buscar por..." aria-label="Buscar por...">
-                            <div class="input-group-append d-flex">
-                                <button class="btn border-0 shadow-sm">
-                                    <span class="icon-search"></span>
-                                </button>
-                            </div>
+                    <div class="input-group">
+                        <button class="btn border-end-0 shadow-sm">
+                            <span class="icon-search"></span>
+                        </button>
+                        <input type="text" class="form-control text-center border-start-0 shadow-sm"
+                            placeholder="Buscar por..." aria-label="Buscar por...">
+                        <div class="input-group-append d-flex">
+                            
                         </div>
-                    </div>
-                    <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1"
-                        aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <ul class="navbar-nav px-4 justify-content-end">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Cadastros
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item text-primary"
-                                            href="./indexcadastrodoclienteFornecedor.html">Clientes e Fornecedores</a>
-                                    </li>
-                                    <li><a class="dropdown-item text-primary"
-                                            href="./indexcadastrodoproduto.html">Produtos</a></li>
-                                    <li><a class="dropdown-item text-primary"
-                                            href="./indexcadastrovendedores.html">Vendedores</a></li>
-                                    <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Suprimentos
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item text-primary" href="./controledeestoque.html">Controle
-                                            de estoque</a></li>
-                                    <li><a class="dropdown-item text-primary" href="./indexpedidodecompra.html">Pedidos
-                                            de compra</a></li>
-                                    <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="user">
-                        <a href="" class="btn border-0">
-                            <span class="icon-user border-0"></span>
-                        </a>
                     </div>
                 </div>
-            </nav>
-        </header>
+                <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <ul class="navbar-nav px-4 justify-content-end">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Cadastros
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-primary"
+                                        href="./indexcadastrodoclienteFornecedor.html">Clientes e Fornecedores</a>
+                                </li>
+                                <li><a class="dropdown-item text-primary"
+                                        href="./indexcadastrodoproduto.html">Produtos</a></li>
+                                <li><a class="dropdown-item text-primary"
+                                        href="./indexcadastrovendedores.html">Vendedores</a></li>
+                                <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Suprimentos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-primary" href="./controledeestoque.html">Controle
+                                        de estoque</a></li>
+                                <li><a class="dropdown-item text-primary" href="./indexpedidodecompra.html">Pedidos
+                                        de compra</a></li>
+                                <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user">
+                    <a href="./user.html" class="btn border-0">
+                        <span class="icon-user border-0"></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <div class="container mt-5">
@@ -115,10 +109,11 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="client" role="tabpanel" aria-labelledby="client-tab">
+                    <!-- Cadastro de clientes-->
                     <div class="container mt-5">
                         <h2>Cadastro de Clientes</h2>
                         <!-- Botão de adicionar -->
-                        <button id="addBtn" class="btn btn-primary mb-3">Adicionar Linha</button>
+                        <button id="addBtn" class="btn btn-primary mb-3">Adicionar Clientes</button>
                         <!-- Tabela -->
                         <table id="example" class="display table table-striped">
                             <thead>
@@ -174,60 +169,114 @@
                     </div>
                     <script src="../js/DataTest.js"></script>
                 </div>
-            </div>
-            <div class="tab-pane fade" id="supplier" role="tabpanel" aria-labelledby="supplier-tab">
-                <div class="container mt-5">
-                    <h2 class="text-center">Cadastro de Fornecedores</h2>
+                <div class="tab-pane fade" id="supplier" role="tabpanel" aria-labelledby="supplier-tab">
+                    <!--Cadastro de Fornecedores-->
+                    <div class="container mt-5">
+                        <h2 class="text-center">Cadastro de Fornecedores</h2>
+                        <!-- Botão de adicionar -->
+                        <button id="addSupplierBtn" class="btn btn-primary mb-3">Adicionar Fornecedores</button>
+                        <!-- Tabela *necessário?* -->
+                        <table id="example" class="display table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Idade</th>
+                                    <th>CPF/CNPJ</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Luiz</td>
+                                    <td>15</td>
+                                    <td>216.213.861-06</td>
+                                    <td>
+                                        <button class="btn border-0 btn-edit">
+                                            <span class="icon-pencil"></span>
+                                        </button>
+                                        <button class="btn bORDER-0 btn-delete">
+                                            <span class="icon-bin2"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ana</td>
+                                    <td>22</td>
+                                    <td>216.213.861-06</td>
+                                    <td>
+                                        <button class="btn border-0 btn-edit">
+                                            <span class="icon-pencil border-0"></span>
+                                        </button>
+                                        <button class="btn border-0 btn-delete">
+                                            <span class="icon-bin2"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ana</td>
+                                    <td>22</td>
+                                    <td>216.213.861-06</td>
+                                    <td>
+                                        <button class="btn border-0 btn-edit">
+                                            <span class="icon-pencil border-0"></span>
+                                        </button>
+                                        <button class="btn border-0 btn-delete">
+                                            <span class="icon-bin2"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <script src="../js/DataTest.js"></script>
                 </div>
             </div>
-        </div>
-        </div>
-        <!-- Modal Adicionar Cliente -->
-        <div class="modal fade" id="addClientModal" tabindex="-1" role="dialog" aria-labelledby="addClientModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="addClientModalLabel">Adicionar Cliente</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <!-- Formulário de cliente -->
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Salvar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal Adicionar Fornecedor -->
-        <div class="modal fade" id="addSupplierModal" tabindex="-1" role="dialog"
-            aria-labelledby="addSupplierModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="addSupplierModalLabel">Adicionar Fornecedor</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <!-- Formulário de fornecedor -->
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Salvar</button>
+            <!-- Modal Adicionar Cliente -->
+            <div class="modal fade" id="addClientModal" tabindex="-1" role="dialog"
+                aria-labelledby="addClientModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addClientModalLabel">Adicionar Cliente</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <!-- Formulário de cliente -->
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-primary">Salvar</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <!-- Modal Adicionar Fornecedor -->
+            <div class="modal fade" id="addSupplierModal" tabindex="-1" role="dialog"
+                aria-labelledby="addSupplierModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addSupplierModalLabel">Adicionar Fornecedor</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <!-- Formulário de fornecedor -->
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-primary">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </main>
     <footer class="mt-5 mb-4 p-5">
         <div class="text-white">

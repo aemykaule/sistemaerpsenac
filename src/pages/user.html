@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/user.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/icomoon.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>User</title>
+</head>
+<body>
+    <header class="header shadow p-1 bg-body-tertiary rounded">
+        <nav class="navbar navbar-expand-lg justify-content-between">
+            <div class="container d-flex">
+                <a class="navbar-brand text-warning d-flex" href="./indexhome.html">
+                    <img class="logosenac" src="../../assets/img/Logo_Senac.png" alt="Logo do senac">
+                </a>
+                <div class="container d-flex">
+                    <div class="input-group">
+                        <button class="btn border-end-0 shadow-sm">
+                            <span class="icon-search"></span>
+                        </button>
+                        <input type="text" class="form-control text-center border-start-0 shadow-sm"
+                            placeholder="Buscar por..." aria-label="Buscar por...">
+                        <div class="input-group-append d-flex">
+                            
+                        </div>
+                    </div>
+                </div>
+                <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <ul class="navbar-nav px-4 justify-content-end">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Cadastros
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-primary"
+                                        href="./indexcadastrodoclienteFornecedor.html">Clientes e Fornecedores</a>
+                                </li>
+                                <li><a class="dropdown-item text-primary"
+                                        href="./indexcadastrodoproduto.html">Produtos</a></li>
+                                <li><a class="dropdown-item text-primary"
+                                        href="./indexcadastrovendedores.html">Vendedores</a></li>
+                                <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Suprimentos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-primary" href="./controledeestoque.html">Controle
+                                        de estoque</a></li>
+                                <li><a class="dropdown-item text-primary" href="./indexpedidodecompra.html">Pedidos
+                                        de compra</a></li>
+                                <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user">
+                    <a href="./user.html" class="btn border-0">
+                        <span class="icon-user border-0"></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <body>
+            <div class="container mt-4">
+                <div class="profile-header">
+                    <img src="../../assets/img/cara.olhando.tablet.png" class="rounded-circle" alt="Foto de Perfil">
+                    <h2>Nome do Usuário</h2>
+                    <p>@usuario</p>
+                </div>
+                <!-- Abas de Navegação -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="profile-settings-tab" data-bs-toggle="tab" href="#profile-settings" role="tab" aria-controls="profile-settings" aria-selected="true"> Editar Perfil
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="account-settings-tab" data-bs-toggle="tab" href="#account-settings" role="tab" aria-controls="account-settings" aria-selected="false"> Configurações da Conta
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="notifications-tab" data-bs-toggle="tab" href="#notifications" role="tab" aria-controls="notifications" aria-selected="false"> Notificações
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="suport-tab" data-bs-toggle="tab" href="#suport" role="tab" aria-controls="suport/help" aria-selected="false"> Suporte/Ajuda
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="billing-tab" data-bs-toggle="tab" href="#billing" role="tab" aria-controls="billing" aria-selected="false"> Faturamento
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="support-tab" data-bs-toggle="tab" href="#support" role="tab" aria-controls="support" aria-selected="false"> Suporte
+                        </a>
+                    </li>
+                </ul>
+                <!-- Abas -->
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="profile-settings" role="tabpanel" aria-labelledby="profile-settings-tab">
+                        <h3>Configurações de Perfil</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Nome de Usuário</label>
+                                <input type="text" class="form-control" id="username"  placeholder="Nome do Usuário">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="usuario@exemplo.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="phonenumber" class="form-label">Telefone</label>
+                                <input type="number" class="form-control" id="telefone" rows="3"  placeholder="(XX) XXXX-XXXX"></input>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Endereço</label>
+                                <input type="text" class="form-control" id="address" rows="3" placeholder="Rua, Número, Complemento, Bairro, Cidade, Estado"></input>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Salvar alterações</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="account-settings" role="tabpanel" aria-labelledby="account-settings-tab">
+                        <h3>Configurações da Conta</h3>
+                        <!-- Configurações da Conta -->
+                        <form>
+                            <div class="mb-3">
+                                <label for="current-password" class="form-label">Senha Atual</label>
+                                <input type="password" id="current-password" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="new-password" class="form-label">Nova Senha</label>
+                                <input type="password" id="new-password" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check form-switch mt-4">
+                                    <input class="form-check-input" type="checkbox" id="toggle-dark-mode">
+                                    <label class="form-check-label" for="toggle-dark-mode"> <p class="p-1">Modo Escuro</p></label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Salvar alterações</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
+                        <h3>Notificações</h3>
+                        <!-- Notificações -->
+                        <form>
+                            <div class="mb-3">
+                                <div class="form-check form-switch mt-4">
+                                    <input class="form-check-input" type="checkbox" id="toggle-notifications">
+                                    <label class="form-check-label" for="toggle-notifications"> <p class="p-1">Desativar Notificações</p></label>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Preferências
+                                </button>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Todas</a></li>
+                                <li><a class="dropdown-item" href="#">Cadastros</a></li>
+                                <li><a class="dropdown-item" href="#">Relatórios</a></li>
+                                <li><a class="dropdown-item" href="#">Controle de estoque</a></li>
+                                <li><a class="dropdown-item" href="#">Pedidos de compra</a></li>
+                                </ul>
+                                <button  class="btn btn-primary mt">Excluir notificações</button>
+                            </div>
+                            <!-- CARDS DE NOTIFICAÇÃO -->
+                            <div class="card mt-4">
+                                <div class="card-header bg-warning-subtle text-warning-emphasis">
+                                    <h5 class="text-bold">Entrada de Novo Estoque</h5>
+                                </div>
+                                <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>Sucesso! O estoque do produto 'Notebook X' foi atualizado com 50 novas unidades.</p>
+                                </blockquote>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header bg-warning-subtle text-warning-emphasis">
+                                    <h5>Novo Pedido de Compra Criado</h5>
+                                </div>
+                                <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>Novo pedido de compra #12345 criado para o fornecedor 'Papelaria XYZ'.</p>
+                                </blockquote>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header bg-warning-subtle text-warning-emphasis">
+                                    <h5>Novo Cliente Cadastrado</h5>
+                                </div>
+                                <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>Sucesso! O cliente 'João Silva' foi cadastrado no sistema.</p>
+                                </blockquote>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-2">Salvar alterações</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+                        <h3>Segurança</h3>
+                    </div>
+                    <div class="tab-pane fade" id="billing" role="tabpanel" aria-labelledby="billing-tab">
+                        <h3>Faturamento</h3>
+                        <!-- Faturamento -->
+                    </div>
+                    <div class="tab-pane fade" id="support" role="tabpanel" aria-labelledby="support-tab">
+                        <h3>Suporte</h3>
+                        <!-- Suporte -->
+                    </div>
+                </div>
+            </div>
+        </body>
+    </main>
+    <footer class="p-5">
+        <div class="text-white">
+            <p class="mb-5">Rua das Inovações, nº 2023, Cidade Futura, Terra Nova</p>
+            <p class="mb-5">(55) 1234-5678</p>
+            <p class="mb-5">tecnicoinformatica@senac.com</p>
+            <hr class="text-white mt-5">
+            <p class="text-white text-center justify-content-center">@Copyright All Rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <script src="../../src/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

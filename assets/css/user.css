@@ -2,14 +2,25 @@
     width: 5rem;
     height: 2.5rem;
 }
-.mulher.pensando{
-    width: 87rem;
-    height: 34.375rem;
+.borTop{
+    border-top: 1px solid #dee2e6 !important;
 }
+.borBottom{
+    border-bottom: 1px solid #dee2e6 !important;
+}   
+#toggle-dark-mode,
+#toggle-notifications{
+    width: 3rem;
+    height: 1.5rem;
+}
+
+
+
 footer{
     background-color: #005792;
-    height: 20rem;
-    margin-top: 10rem;
+    position: absolute;
+    top: 230rem;
+    width: 100%;
 }
 @media only screen and (max-width: 990px) {
     .borTop{

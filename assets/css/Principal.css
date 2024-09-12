@@ -50,9 +50,23 @@ h1.display-5 {
     border: none;
 }
 footer{
-    background-color: #005792;
-    height: 20rem;
+    background-color: #20427e;
+    height: 23rem;
     margin-top: 10rem;
+}
+footer .card-left1{
+    width: 50%;
+    margin-left: 2rem;
+}
+
+footer .card-right2{
+    width: 50%;
+    margin-top: 3rem;
+    border: 1rem 0rem 0rem 0rem;
+}
+footer .card-right2{
+    margin-top: 3rem;
+    border-left: 3px solid white;
 }
 @media only screen and (max-width: 990px) {
     h1{

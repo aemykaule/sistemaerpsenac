@@ -12,79 +12,75 @@
 </head>
 
 <body>
-    <header>
-        <header class="shadow p-3 mb-5 bg-body-tertiary rounded">
-            <nav class="navbar navbar-expand-lg justify-content-between">
+    <header class="header shadow p-1 bg-body-tertiary rounded">
+        <nav class="navbar navbar-expand-lg justify-content-between">
+            <div class="container d-flex">
+                <a class="navbar-brand text-warning d-flex" href="./indexhome.html">
+                    <img class="logosenac" src="../../assets/img/Logo_Senac.png" alt="Logo do senac">
+                </a>
                 <div class="container d-flex">
-                    <a class="navbar-brand text-warning d-flex" href="./indexhome.html">
-                        <img class="logosenac" src="../../assets/img/Logo_Senac.png" alt="Logo do senac" height="60px" width="100px">
-                    </a>
-                    <div class="notifiacao">
-                        <a href="" class="btn border-0">
-                            <span class="icon-notification border-0"></span>
-                        </a>
-                    </div>
-                    <div class="container">
-                        <div class="input-group">
-                            <input type="text" class="form-control text-center border-0 shadow-sm" placeholder="Buscar por..."
-                                aria-label="Buscar por...">
-                            <div class="input-group-append d-flex">
-                                <button class="btn border-0 shadow-sm">
-                                    <span class="icon-search"></span>
-                                </button>
-                            </div>
+                    <div class="input-group">
+                        <button class="btn border-end-0 shadow-sm">
+                            <span class="icon-search"></span>
+                        </button>
+                        <input type="text" class="form-control text-center border-start-0 shadow-sm"
+                            placeholder="Buscar por..." aria-label="Buscar por...">
+                        <div class="input-group-append d-flex">
+                            
                         </div>
-                    </div>
-                    <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1"
-                        aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <ul class="navbar-nav px-4 justify-content-end">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Cadastros
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item text-primary"
-                                            href="./indexcadastrodoclienteFornecedor.html">Clientes e Fornecedores</a>
-                                    </li>
-                                    <li><a class="dropdown-item text-primary"
-                                            href="./indexcadastrodoproduto.html">Produtos</a></li>
-                                    <li><a class="dropdown-item text-primary"
-                                            href="./indexcadastrovendedores.html">Vendedores</a></li>
-                                    <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Suprimentos
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item text-primary" href="./controledeestoque.html">Controle
-                                            de estoque</a></li>
-                                    <li><a class="dropdown-item text-primary" href="./indexpedidodecompra.html">Pedidos
-                                            de compra</a></li>
-                                    <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="user">
-                        <a href="" class="btn border-0">
-                            <span class="icon-user border-0"></span>
-                        </a>
                     </div>
                 </div>
-            </nav>
-        </header>
+                <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <ul class="navbar-nav px-4 justify-content-end">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Cadastros
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-primary"
+                                        href="./indexcadastrodoclienteFornecedor.html">Clientes e Fornecedores</a>
+                                </li>
+                                <li><a class="dropdown-item text-primary"
+                                        href="./indexcadastrodoproduto.html">Produtos</a></li>
+                                <li><a class="dropdown-item text-primary"
+                                        href="./indexcadastrovendedores.html">Vendedores</a></li>
+                                <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Suprimentos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-primary" href="./controledeestoque.html">Controle
+                                        de estoque</a></li>
+                                <li><a class="dropdown-item text-primary" href="./indexpedidodecompra.html">Pedidos
+                                        de compra</a></li>
+                                <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="user">
+                    <a href="./user.html" class="btn border-0">
+                        <span class="icon-user border-0"></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <h1 class="text-center">CONTROLE DE ESTOQUE</h1>
@@ -112,7 +108,7 @@
                     </div>
                     <div class="icone align-items-center d-flex">
                         <span class="icon-info"></span>
-                        <span class="icon-pencil"></span>
+                        <span class="icon-pencil" data-bs-toggle="modal"data-bs-target="#example"></span>
                         <span class="icon-bin2"></span>
                     </div>
                 </li>
@@ -207,6 +203,82 @@
                     </div>
                 </li>
             </ul>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Informações do Vendedor</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <h6>INFORMAÇÕES BÁSICAS</h6>
+                            <div class="form-row">
+                                <div class="form-group col-md-10">
+                                    <label for="nome-completo">Nome completo</label>
+                                    <input type="text" class="form-control" id="nome-completo">
+                                </div>
+                                <div class="form-group col-md-10">
+                                    <label for="cpf-cnpj">CPF/CNPJ</label>
+                                    <input type="text" class="form-control" id="cpf-cnpj">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-10">
+                                    <label for="telefone">Telefone</label>
+                                    <input type="text" class="form-control" id="telefone">
+                                </div>
+                                <div class="form-group col-md-10">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="Setor">Setor</label>
+                                        <input type="text" class="form-control" id="setor">
+                                    </div>
+                                </div>
+                                <h6>ENDEREÇO</h6>
+                                <div class="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="rua">Rua</label>
+                                        <input type="text" class="form-control" id="rua">
+                                    </div>
+                                    <div class="form-group col-md-10">
+                                        <label for="numero">Nº</label>
+                                        <input type="text" class="form-control" id="numero">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="bairro">Bairro</label>
+                                        <input type="text" class="form-control" id="bairro">
+                                    </div>
+                                    <div class="form-group col-md-10">
+                                        <label for="cep">CEP</label>
+                                        <input type="text" class="form-control" id="cep">
+                                    </div>
+                                    <div class="form-group col-md-10">
+                                        <label for="uf">UF</label>
+                                        <input type="text" class="form-control" id="uf">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="cidade">Cidade</label>
+                                        <input type="text" class="form-control" id="cidade">
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Salvar</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="mt-5 p-5" style="height: 320px">
