@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,24 +17,33 @@
                 <a class="navbar-brand text-warning" href="./indexhome.html">
                     <img class="logosenac" src="../../assets/img/Logo_Senac.png" alt="Logo do senac">
                 </a>
-                    <div class="container d-flex offcanvas">
-                        <div class="input-group offcanvas">
-                            <button class="btn shadow-sm">
-                                <span class="icon-search"></span>
-                            </button>
-                            <input type="text" class="form-control text-center border-start-0 shadow-sm"
-                                placeholder="Buscar por..." aria-label="Buscar por...">
-                            <div class="input-group-append"></div>
+                <div class="container offcanvas-lg">
+                    <div class="input-group">
+                        <button class="btn border-end-0 shadow-sm">
+                            <span class="icon-search"></span>
+                        </button>
+                        <input type="text" class="form-control text-center border-start-0 shadow-sm" placeholder="Buscar por..."
+                            aria-label="Buscar por...">
+                        <div class="input-group-append d-flex">
                         </div>
                     </div>
-                    <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1"
+                </div>
+                <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="offcanvas offcanvas-end d-flex" id="offcanvasRight" tabindex="-1"
                     aria-labelledby="offcanvasRightLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <div class="offcanvas-header justify-content-between">
+                        <div class="container-fluid me-5 d-flex">
+                            <button type="button" class="btn border-0" data-bs-dismiss="offcanvas" aria-label=""><span class="icon-user"></span></button>
+                            <button type="button" class="btn border-0" data-bs-dismiss="offcanvas" aria-label=""><span class="icon-search border-0"></span></button>
+                        </div>
+                        <div class="container-fluid"></div>
+                        <div class="container-fluid">
+                            <button type="button" class="btn border-0" data-bs-dismiss="offcanvas" aria-label="Close"><span class="icon-close"></span></button>
+                        </div>
                     </div>
                     <ul class="navbar-nav px-4 justify-content-end">
                         <li class="nav-item dropdown">
@@ -70,6 +79,9 @@
                         </li>
                     </ul>
                 </div>
+                <a href="./user.html" class="offcanvas">
+                    <span class="icon-user"></span>
+                </a>
             </div>
         </nav>
     </header>
@@ -110,39 +122,39 @@
                     <div class="carousel-item active">
                         <div class="d-flex justify-content-around">
                             <a href="./indexlogin.html" class="icon-box bg-primary">
-                                <span class="icon-dollar"></span>
+                                <span class="icon-money"></span>
                             </a>
                             <a class="icon-box bg-warning">
-                                <span class="icon-cart"></span>
+                                <span class="icon-carrinho"></span>
                             </a>
                             <a href="./controledeestoque.html" class="icon-box bg-primary ">
-                                <span class="icon-caxa"></span>
+                                <span class="icon-caxota"></span>
                             </a>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="d-flex justify-content-around">
                             <a href="./indexpedidodecompra.html" class="icon-box bg-warning">
-                                <span class="icon-shopping-bag"></span>
+                                <span class="icon-bolsa"></span>
                             </a>
                             <a href="./relatorio.html" class="icon-box bg-primary ">
-                                <span class="icon-stats-bars2"></span>
+                                <span class="icon-estatistica"></span>
                             </a>
                             <a class="icon-box bg-warning">
-                                <span class="icon-profile"></span>
+                                <span class="icon-pessoa"></span>
                             </a>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="d-flex justify-content-around">
                             <a href="./indexcadastrodoclienteFornecedor.html" class="icon-box bg-primary ">
-                                <span class="icon-truck"></span>
+                                <span class="icon-caminhao"></span>
                             </a>
                             <a href="" class="icon-box bg-warning">
-                                <span class="icon-calendar"></span>
+                                <span class="icon-calendario"></span>
                             </a>
                             <a class="icon-box bg-primary ">
-                                <span class="icon-cog"></span>
+                                <span class="icon-settings"></span>
                             </a>
                         </div>
                     </div>
@@ -162,31 +174,31 @@
             <div class="d-none d-md-flex flex-wrap justify-content-center icon-row">
                 <div class="icon-row">
                     <a href="./indexlogin.html" class="icon-box bg-primary">
-                        <span class="icon-dollar"></span>
+                        <span class="icon-money"></span>
                     </a>
                     <a class="icon-box bg-warning">
-                        <span class="icon-cart"></span>
+                        <span class="icon-carrinho"></span>
                     </a>
                     <a href="./controledeestoque.html" class="icon-box bg-primary ">
-                        <span class="icon-caxa"></span>
+                        <span class="icon-caxota"></span>
                     </a>
                     <a href="./indexpedidodecompra.html" class="icon-box bg-warning">
-                        <span class="icon-shopping-bag"></span>
+                        <span class="icon-bolsa"></span>
                     </a>
                     <a href="./relatorio.html" class="icon-box bg-primary ">
-                        <span class="icon-stats-bars2"></span>
+                        <span class="icon-estatistica"></span>
                     </a>
                     <a class="icon-box bg-warning">
-                        <span class="icon-profile"></span>
+                        <span class="icon-pessoa"></span>
                     </a>
                     <a href="./indexcadastrodoclienteFornecedor.html" class="icon-box bg-primary ">
-                        <span class="icon-truck"></span>
+                        <span class="icon-caminhao"></span>
                     </a>
                     <a href="" class="icon-box bg-warning">
-                        <span class="icon-calendar"></span>
+                        <span class="icon-calendario"></span>
                     </a>
                     <a class="icon-box bg-primary ">
-                        <span class="icon-cog"></span>
+                        <span class="icon-settings"></span>
                     </a>
                 </div>
             </div>
@@ -237,13 +249,47 @@
             </div>
         </section>
     </main>
-    <footer class="p-5">
-        <div class="text-white">
-            <p class="mb-5">Rua das Inovações, nº 2023, Cidade Futura, Terra Nova</p>
-            <p class="mb-5">(55) 1234-5678</p>
-            <p class="mb-5">tecnicoinformatica@senac.com</p>
-            <hr class="text-white mt-5">
-            <p class="text-white text-center justify-content-center">@Copyright All Rights reserved.</p>
+    <footer class="text-white d-flex">
+        <div class="card-left3 d-inline">
+            <div class="row">
+                <div class="col">
+                    <img class="imgfooter" src="../../assets/img/images.jpg" alt="SENAC foto" class="ml-5">
+                    <div class="col">
+                        <span class="icon-instagram"></span>
+                        <span class="icon-facebook"></span>
+                        <span class="icon-whats"></span>
+                    </div>
+                    <div class="textfooter">
+                        <h6 class="mt-5">@Sesc_ERP / Senac ERP / (55) 1234-5678</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-right3 d-inline">
+            <div class="col">
+                <div class="cards-footer d-flex">
+                    <span class="icon-local"></span>
+                    <p class="ml-5">Rua das Inovações, N 23, Cidade Futura, Terra Nova;</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="cards-footer d-flex mt-5">
+                    <span class="icon-globo"></span>
+                    <p class="ml-5">Brasil</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="cards-footer d-flex mt-5">
+                    <span class="icon-clips"></span>
+                    <p class="ml-5">www.senac.ERP.com.br</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="cards-footer d-flex mt-5">
+                    <span class="icon-okay"></span>
+                    <p class="ml-5">Sua segurança em primeiro lugar</p>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="../../src/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -36,7 +36,21 @@ body{
     }
 }
 
-.footer{
-    background-color: #005792;
-    background-color: #ecf1f5;
+footer{
+    width: 100;
+    background-color: #20427e;
+    height: 23rem;
+    margin-top: 10rem;
+}
+footer .card-left3{
+    width: 49%;
+    margin-left: 2rem;
+}
+footer .card-right3{
+    width: 49%;
+    margin-top: 3rem
+}
+footer .card-center{
+    width: 2%;
+    border-left: 2px solid #fff;
 }

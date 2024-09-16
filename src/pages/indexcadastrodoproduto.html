@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CadastroProdutos</title>
+    <title>Cadastro Produtos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/cadastrarvendedor.css">
+    <link rel="stylesheet" href="../../assets/css/icomoon.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/css/CadastroDoProduto.css">
-    <link rel="stylesheet" href="../../assets/css/icomooon.css">
+
     <!-- DataTables CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
-    
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -23,20 +25,19 @@
 
 <body>
     <header class="header shadow p-1 bg-body-tertiary rounded">
-        <nav class="navbar navbar-expand-lg justify-content-between">
+        <nav class="navbar navbar-expand-lg justify-content-around">
             <div class="container d-flex">
-                <a class="navbar-brand text-warning d-flex" href="./indexhome.html">
+                <a class="navbar-brand text-warning" href="./indexhome.html">
                     <img class="logosenac" src="../../assets/img/Logo_Senac.png" alt="Logo do senac">
                 </a>
-                <div class="container d-flex">
+                <div class="container offcanvas-lg">
                     <div class="input-group">
                         <button class="btn border-end-0 shadow-sm">
                             <span class="icon-search"></span>
                         </button>
-                        <input type="text" class="form-control text-center border-start-0 shadow-sm"
-                            placeholder="Buscar por..." aria-label="Buscar por...">
+                        <input type="text" class="form-control text-center border-start-0 shadow-sm" placeholder="Buscar por..."
+                            aria-label="Buscar por...">
                         <div class="input-group-append d-flex">
-                            
                         </div>
                     </div>
                 </div>
@@ -44,11 +45,18 @@
                     data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1"
+                
+                <div class="offcanvas offcanvas-end d-flex" id="offcanvasRight" tabindex="-1"
                     aria-labelledby="offcanvasRightLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
+                    <div class="offcanvas-header justify-content-between">
+                        <div class="container-fluid me-5 d-flex">
+                            <button type="button" class="btn border-0" data-bs-dismiss="offcanvas" aria-label=""><span class="icon-user"></span></button>
+                            <button type="button" class="btn border-0" data-bs-dismiss="offcanvas" aria-label=""><span class="icon-search border-0"></span></button>
+                        </div>
+                        <div class="container-fluid"></div>
+                        <div class="container-fluid">
+                            <button type="button" class="btn border-0" data-bs-dismiss="offcanvas" aria-label="Close"><span class="icon-close"></span></button>
+                        </div>
                     </div>
                     <ul class="navbar-nav px-4 justify-content-end">
                         <li class="nav-item dropdown">
@@ -84,154 +92,188 @@
                         </li>
                     </ul>
                 </div>
-                <div class="user">
-                    <a href="./user.html" class="btn border-0">
-                        <span class="icon-user border-0"></span>
-                    </a>
-                </div>
+                <a href="./user.html" class="offcanvas">
+                    <span class="icon-user"></span>
+                </a>
             </div>
         </nav>
     </header>
     <main>
-        <div class="container mt-5">
-            <h2>Cadastro de Produto</h2>
-    
-            <!-- Botão de adicionar -->
-            <button id="addBtn" class="btn btn-primary mb-3">Adicionar Producto</button>
-    
-            <!-- Tabela -->
-            <table id="example" class="display table table-striped">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Idade</th>
-                        <th>CPF/CNPJ</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Luiz</td>
-                        <td>15</td>
-                        <td>216.213.861-06</td>
-                        <td>
-                            <button class="btn border-0 btn-edit">
-                                <span class="icon-pencil"></span>
-                            </button>
-                            <button class="btn bORDER-0 btn-delete">
-                                <span class="icon-bin2"></span>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Ana</td>
-                        <td>22</td>
-                        <td>216.213.861-06</td>
-                        <td>
-                            <button class="btn border-0 btn-edit">
-                                <span class="icon-pencil border-0"></span>
-                            </button>
-                            <button class="btn border-0 btn-delete">
-                                <span class="icon-bin2"></span>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Ana</td>
-                        <td>22</td>
-                        <td>216.213.861-06</td>
-                        <td>
-                            <button class="btn border-0 btn-edit">
-                                <span class="icon-pencil border-0"></span>
-                            </button>
-                            <button class="btn border-0 btn-delete">
-                                <span class="icon-bin2"></span>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div>
+            <!-- Cadastro de Produto-->
+            <div class="container mt-5">
+                <h2>Cadastro de Produtos</h2>
+                <!-- Botão de adicionar -->
+                <button id="addBtn" class="btn btn-primary mb-3 mt-2" data-toggle="modal"
+                    data-target="#customPromptModal">Adicionar Produto</button>
+                <!-- Tabela -->
+                <table id="clientes" class="display table table-striped mt-5">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>CPF/CNPJ</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Luiz</td>
+                            <td>15</td>
+                            <td>216.213.861-06</td>
+                            <td>
+                                <button class="btn border-0 btn-edit">
+                                    <span class="icon-lapis border-0"></span>
+                                </button>
+                                <button class="btn border-0 btn-delete">
+                                    <span class="icon-lixo"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ana</td>
+                            <td>22</td>
+                            <td>216.213.861-06</td>
+                            <td>
+                                <button class="btn border-0 btn-edit">
+                                    <span class="icon-lapis border-0"></span>
+                                </button>
+                                <button class="btn border-0 btn-delete">
+                                    <span class="icon-lixo"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ana</td>
+                            <td>22</td>
+                            <td>216.213.861-06</td>
+                            <td>
+                                <button class="btn border-0 btn-edit">
+                                    <span class="icon-lapis border-0"></span>
+                                </button>
+                                <button class="btn border-0 btn-delete">
+                                    <span class="icon-lixo"></span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <script src="../js/DataTest.js"></script>
         </div>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        </div>
+        <!-- Modal Adicionar Produto -->
+        <div class="modal fade" id="customPromptModal" tabindex="-1" aria-labelledby="customPromptModalLabel"
             aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Informações do Vendedor</h5>
+                        <h5 class="modal-title" id="customPromptModalLabel">Novo Produto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                        <!-- Formulário Adicionar Produto -->
                         <form>
-                            <div class="form-group">
-                                <label for="imageUpload">Escolha uma imagem</label>
-                                <input type="file" class="form-control-file" id="imageUpload" accept="image/*">
-                            </div>
                             <h6>INFORMAÇÕES BÁSICAS</h6>
                             <div class="form-row">
+                                <input type="file" name="arquivos" class="btn"  accept="image/png, image/jpeg"  multiple/>
                                 <div class="form-group col-md-10">
-                                    <label for="nome">Nome</label>
-                                    <input type="text" class="form-control" id="nome">
+                                    <label for="nome-produto">Nome do Produto </label>
+                                    <input type="text" class="form-control" id="nome-produto">
                                 </div>
                                 <div class="form-group col-md-10">
-                                    <label for="codigo">Código</label>
-                                    <input type="number" class="form-control" id="codigo">
+                                    <label for="cpf-cnpj">Código do produto</label>
+                                    <input type="text" class="form-control" id="cpf-cnpj">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-10">
-                                    <label for="Tipo">Tipo do produto</label>
-                                    <input type="text" class="form-control" id="Tipo">
+                                    <label for="telefone">Unidade</label>
+                                    <input type="text" class="form-control" id="telefone">
                                 </div>
                                 <div class="form-group col-md-10">
-                                    <label for="preço">Preço Un.</label>
-                                    <input type="number" class="form-control" id="preço">
+                                    <label for="email">Tipo do produto</label>
+                                    <input type="email" class="form-control" id="email">
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-10">
-                                        <label for="Unidade">Unidade</label>
-                                        <input type="number" class="form-control" id="Unidade">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-10">
-                                        <label for="linha de produto">Linha de Produto</label>
-                                        <input type="text" class="form-control" id="linha de produto">
-                                    </div>
-                                    <div class="form-group col-md-10">
-                                        <label for="Descrição">Descrição do produto</label>
-                                        <input type="text" class="form-control" id="descriçao">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-10">
-                                        <label for="Localização">Localização</label>
-                                        <input type="text" class="form-control" id="Localizaçao">
+                                        <label for="Setor">Preço da Unidade</label>
+                                        <input type="text" class="form-control" id="setor">
                                     </div>
                                 </div>
                             </div>
+                            <h6>Informações Extras</h6>
+                            <div class="form-row">
+                                <div class="form-group col-md-10">
+                                    <label for="rua">Linha do Produto</label>
+                                    <input type="text" class="form-control" id="rua">
+                                </div>
+                                <div class="form-group col-md-10">
+                                    <label for="numero">Descrição do produto</label>
+                                    <input type="text" class="form-control" id="numero">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-10">
+                                    <label for="localizacao">Localizaçao</label>
+                                    <input type="text" class="form-control" id="bairro">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Adicionar</button>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Salvar</button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer class="mt-5 p-5" style="height: 320px">
-        <div class="text-white">
-            <p class="mb-5">Rua das Inovações, nº 2023, Cidade Futura, Terra Nova</p>
-            <p class="mb-5">(55) 1234-5678</p>
-            <p class="mb-5">tecnicoinformatica@senac.com</p>
-            <hr class="text-white mt-5">
-            <p class="text-white text-center justify-content-center">@Copyright All Rights reserved.</p>
+    <footer class="text-white d-flex">
+        <div class="card-left3">
+            <div class="row">
+                <div class="col">
+                    <img src="../../assets/img/images.jpg" alt="SENAC foto" class="ml-5">
+                    <div class="col">
+                        <span class="icon-instagram"></span>
+                        <span class="icon-facebook"></span>
+                        <span class="icon-whats"></span>
+                        <h6 class="mt-5">@Sesc_ERP / Senac ERP / (55) 1234-5678</h6>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="card-center"></div>
+            <div class="card-right3 d-inline">
+                <div class="col">
+                    <div class="cards-footer d-flex">
+                        <span class="icon-local"></span>
+                        <p class="ml-5">Rua das Inovações, N 23, Cidade Futura, Terra Nova;</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards-footer d-flex mt-5">
+                        <span class="icon-globo"></span>
+                        <p class="ml-5">Brasil</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards-footer d-flex mt-5">
+                        <span class="icon-clips"></span>
+                        <p class="ml-5">www.senac.ERP.com.br</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards-footer d-flex mt-5">
+                        <span class="icon-okay"></span>
+                        <p class="ml-5">Sua segurança em primeiro lugar</p>
+                    </div>
+                </div>
+            </div>
     </footer>
-    <script src="../../src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../js/datatables.min.js"></script>
-    <script src="../js/DataTest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <script src="../../src/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

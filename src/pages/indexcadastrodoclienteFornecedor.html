@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Cliente</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/css/cadastrocliente.css">
+    <link rel="stylesheet" href="../../assets/css/cadastrarvendedor.css">
     <link rel="stylesheet" href="../../assets/css/icomoon.css">
-    <link rel="stylesheet" href="../../assets/css/icomooon.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 
     <!-- DataTables CSS -->
@@ -26,20 +25,19 @@
 
 <body>
     <header class="header shadow p-1 bg-body-tertiary rounded">
-        <nav class="navbar navbar-expand-lg justify-content-between">
+        <nav class="navbar navbar-expand-lg justify-content-around">
             <div class="container d-flex">
-                <a class="navbar-brand text-warning d-flex" href="./indexhome.html">
+                <a class="navbar-brand text-warning" href="./indexhome.html">
                     <img class="logosenac" src="../../assets/img/Logo_Senac.png" alt="Logo do senac">
                 </a>
-                <div class="container d-flex">
+                <div class="container offcanvas-lg">
                     <div class="input-group">
                         <button class="btn border-end-0 shadow-sm">
                             <span class="icon-search"></span>
                         </button>
-                        <input type="text" class="form-control text-center border-start-0 shadow-sm"
-                            placeholder="Buscar por..." aria-label="Buscar por...">
+                        <input type="text" class="form-control text-center border-start-0 shadow-sm" placeholder="Buscar por..."
+                            aria-label="Buscar por...">
                         <div class="input-group-append d-flex">
-                            
                         </div>
                     </div>
                 </div>
@@ -47,11 +45,18 @@
                     data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1"
+                
+                <div class="offcanvas offcanvas-end d-flex" id="offcanvasRight" tabindex="-1"
                     aria-labelledby="offcanvasRightLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
+                    <div class="offcanvas-header justify-content-between">
+                        <div class="container-fluid me-5 d-flex">
+                            <button type="button" class="btn border-0" data-bs-dismiss="offcanvas" aria-label=""><span class="icon-user"></span></button>
+                            <button type="button" class="btn border-0" data-bs-dismiss="offcanvas" aria-label=""><span class="icon-search border-0"></span></button>
+                        </div>
+                        <div class="container-fluid"></div>
+                        <div class="container-fluid">
+                            <button type="button" class="btn border-0" data-bs-dismiss="offcanvas" aria-label="Close"><span class="icon-close"></span></button>
+                        </div>
                     </div>
                     <ul class="navbar-nav px-4 justify-content-end">
                         <li class="nav-item dropdown">
@@ -87,11 +92,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="user">
-                    <a href="./user.html" class="btn border-0">
-                        <span class="icon-user border-0"></span>
-                    </a>
-                </div>
+                <a href="./user.html" class="offcanvas">
+                    <span class="icon-user"></span>
+                </a>
             </div>
         </nav>
     </header>
@@ -113,9 +116,9 @@
                     <div class="container mt-5">
                         <h2>Cadastro de Clientes</h2>
                         <!-- Botão de adicionar -->
-                        <button id="addBtn" class="btn btn-primary mb-3">Adicionar Clientes</button>
+                        <button id="addBtn" class="btn btn-primary mb-3" data-toggle="modal" data-target="#customPromptModal">Adicionar Clientes</button>
                         <!-- Tabela -->
-                        <table id="example" class="display table table-striped">
+                        <table id="clientes" class="display table table-striped">
                             <thead>
                                 <tr>
                                     <th>Nome</th>
@@ -131,10 +134,10 @@
                                     <td>216.213.861-06</td>
                                     <td>
                                         <button class="btn border-0 btn-edit">
-                                            <span class="icon-pencil"></span>
+                                            <span class="icon-lapis border-0"></span>
                                         </button>
-                                        <button class="btn bORDER-0 btn-delete">
-                                            <span class="icon-bin2"></span>
+                                        <button class="btn border-0 btn-delete">
+                                            <span class="icon-lixo"></span>
                                         </button>
                                     </td>
                                 </tr>
@@ -144,10 +147,10 @@
                                     <td>216.213.861-06</td>
                                     <td>
                                         <button class="btn border-0 btn-edit">
-                                            <span class="icon-pencil border-0"></span>
+                                            <span class="icon-lapis border-0"></span>
                                         </button>
                                         <button class="btn border-0 btn-delete">
-                                            <span class="icon-bin2"></span>
+                                            <span class="icon-lixo"></span>
                                         </button>
                                     </td>
                                 </tr>
@@ -157,10 +160,10 @@
                                     <td>216.213.861-06</td>
                                     <td>
                                         <button class="btn border-0 btn-edit">
-                                            <span class="icon-pencil border-0"></span>
+                                            <span class="icon-lapis border-0"></span>
                                         </button>
                                         <button class="btn border-0 btn-delete">
-                                            <span class="icon-bin2"></span>
+                                            <span class="icon-lixo"></span>
                                         </button>
                                     </td>
                                 </tr>
@@ -170,13 +173,13 @@
                     <script src="../js/DataTest.js"></script>
                 </div>
                 <div class="tab-pane fade" id="supplier" role="tabpanel" aria-labelledby="supplier-tab">
-                    <!--Cadastro de Fornecedores-->
+                    <!-- Cadastro de Fornecedores-->
                     <div class="container mt-5">
-                        <h2 class="text-center">Cadastro de Fornecedores</h2>
+                        <h2>Cadastro de Fornecedores</h2>
                         <!-- Botão de adicionar -->
-                        <button id="addSupplierBtn" class="btn btn-primary mb-3">Adicionar Fornecedores</button>
-                        <!-- Tabela *necessário?* -->
-                        <table id="example" class="display table table-striped">
+                        <button id="addSupplierBtn" class="btn btn-primary mb-3" data-toggle="modal" data-target="#addSupplierModal">Adicionar Fornecedores</button>
+                        <!-- Tabela -->
+                        <table id="fornecedores" class="display table table-striped">
                             <thead>
                                 <tr>
                                     <th>Nome</th>
@@ -192,10 +195,10 @@
                                     <td>216.213.861-06</td>
                                     <td>
                                         <button class="btn border-0 btn-edit">
-                                            <span class="icon-pencil"></span>
+                                            <span class="icon-lapis border-0"></span>
                                         </button>
-                                        <button class="btn bORDER-0 btn-delete">
-                                            <span class="icon-bin2"></span>
+                                        <button class="btn border-0 btn-delete">
+                                            <span class="icon-lixo"></span>
                                         </button>
                                     </td>
                                 </tr>
@@ -205,10 +208,10 @@
                                     <td>216.213.861-06</td>
                                     <td>
                                         <button class="btn border-0 btn-edit">
-                                            <span class="icon-pencil border-0"></span>
+                                            <span class="icon-lapis border-0"></span>
                                         </button>
                                         <button class="btn border-0 btn-delete">
-                                            <span class="icon-bin2"></span>
+                                            <span class="icon-lixo"></span>
                                         </button>
                                     </td>
                                 </tr>
@@ -218,10 +221,10 @@
                                     <td>216.213.861-06</td>
                                     <td>
                                         <button class="btn border-0 btn-edit">
-                                            <span class="icon-pencil border-0"></span>
+                                            <span class="icon-lapis border-0"></span>
                                         </button>
                                         <button class="btn border-0 btn-delete">
-                                            <span class="icon-bin2"></span>
+                                            <span class="icon-lixo"></span>
                                         </button>
                                     </td>
                                 </tr>
@@ -232,60 +235,198 @@
                 </div>
             </div>
             <!-- Modal Adicionar Cliente -->
-            <div class="modal fade" id="addClientModal" tabindex="-1" role="dialog"
-                aria-labelledby="addClientModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
+            <div class="modal fade" id="customPromptModal" tabindex="-1" aria-labelledby="customPromptModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="addClientModalLabel">Adicionar Cliente</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                            <h5 class="modal-title" id="customPromptModalLabel">Novo Cliente</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
+                            <!-- Formulário Adicionar Cliente -->
                             <form>
-                                <!-- Formulário de cliente -->
+                                <h6>INFORMAÇÕES BÁSICAS</h6>
+                                <div class="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="nome-completo">Nome completo</label>
+                                        <input type="text" class="form-control" id="nome-completo">
+                                    </div>
+                                    <div class="form-group col-md-10">
+                                        <label for="cpf-cnpj">CPF/CNPJ</label>
+                                        <input type="text" class="form-control" id="cpf-cnpj">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="telefone">Telefone</label>
+                                        <input type="text" class="form-control" id="telefone">
+                                    </div>
+                                    <div class="form-group col-md-10">
+                                        <label for="email">E-mail</label>
+                                        <input type="email" class="form-control" id="email">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-10">
+                                            <label for="Setor">Setor</label>
+                                            <input type="text" class="form-control" id="setor">
+                                        </div>
+                                    </div>
+                                </div>
+                                <h6>ENDEREÇO</h6>
+                                <div class="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="rua">Rua</label>
+                                        <input type="text" class="form-control" id="rua">
+                                    </div>
+                                    <div class="form-group col-md-10">
+                                        <label for="numero">Nº</label>
+                                        <input type="text" class="form-control" id="numero">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="bairro">Bairro</label>
+                                        <input type="text" class="form-control" id="bairro">
+                                    </div>
+                                    <div class="form-group col-md-10">
+                                        <label for="cep">CEP</label>
+                                        <input type="text" class="form-control" id="cep">
+                                    </div>
+                                    <div class="form-group col-md-10">
+                                        <label for="uf">UF</label>
+                                        <input type="text" class="form-control" id="uf">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="cidade">Cidade</label>
+                                        <input type="text" class="form-control" id="cidade">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Adicionar</button>
                             </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                            <button type="button" class="btn btn-primary">Salvar</button>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Modal Adicionar Fornecedor -->
-            <div class="modal fade" id="addSupplierModal" tabindex="-1" role="dialog"
-                aria-labelledby="addSupplierModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+            <div class="modal fade" id="addSupplierModal" tabindex="-1" aria-labelledby="addSupplierModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="addSupplierModalLabel">Adicionar Fornecedor</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                            <h5 class="modal-title" id="addSupplierModalLabel">Novo Fornecedor</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
+                            <!-- Form. Adicionar Fornecedor -->
                             <form>
-                                <!-- Formulário de fornecedor -->
+                                <h6>INFORMAÇÕES BÁSICAS</h6>
+                                <div class="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="nome-fornecedor">Nome completo</label>
+                                        <input type="text" class="form-control" id="nome-fornecedor">
+                                    </div>
+                                    <div class="form-group col-md-10">
+                                        <label for="cpf-cnpj-fornecedor">CPF/CNPJ</label>
+                                        <input type="text" class="form-control" id="cpf-cnpj-fornecedor">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="telefone-fornecedor">Telefone</label>
+                                        <input type="text" class="form-control" id="telefone-fornecedor">
+                                    </div>
+                                    <div class="form-group col-md-10">
+                                        <label for="email-fornecedor">E-mail</label>
+                                        <input type="email" class="form-control" id="email-fornecedor">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-10">
+                                            <label for="setor-fornecedor">Setor</label>
+                                            <input type="text" class="form-control" id="setor-fornecedor">
+                                        </div>
+                                    </div>
+                                </div>
+                                <h6>ENDEREÇO</h6>
+                                <div class="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="rua-fornecedor">Rua</label>
+                                        <input type="text" class="form-control" id="rua-fornecedor">
+                                    </div>
+                                    <div class="form-group col-md-10">
+                                        <label for="numero-fornecedor">Nº</label>
+                                        <input type="text" class="form-control" id="numero-fornecedor">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="bairro-fornecedor">Bairro</label>
+                                        <input type="text" class="form-control" id="bairro-fornecedor">
+                                    </div>
+                                    <div class="form-group col-md-10">
+                                        <label for="cep-fornecedor">CEP</label>
+                                        <input type="text" class="form-control" id="cep-fornecedor">
+                                    </div>
+                                    <div class="form-group col-md-10">
+                                        <label for="uf-fornecedor">UF</label>
+                                        <input type="text" class="form-control" id="uf-fornecedor">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="cidade-fornecedor">Cidade</label>
+                                        <input type="text" class="form-control" id="cidade-fornecedor">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Adicionar</button>
                             </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                            <button type="button" class="btn btn-primary">Salvar</button>
                         </div>
                     </div>
                 </div>
             </div>
-    </main>
-    <footer class="mt-5 mb-4 p-5">
-        <div class="text-white">
-            <p class="mb-5">Rua das Inovações, nº 2023, Cidade Futura, Terra Nova</p>
-            <p class="mb-5">(55) 1234-5678</p>
-            <p class="mb-5">tecnicoinformatica@senac.com</p>
-            <hr class="text-white mt-5">
-            <p class="text-white text-center justify-content-center">@Copyright All Rights reserved.</p>
         </div>
+    </main>    
+    <footer class="text-white d-flex">
+        <div class="card-left3">
+            <div class="row">
+                <div class="col">
+                    <img src="../../assets/img/images.jpg" alt="SENAC foto" class="ml-5">
+                    <div class="col">
+                        <span class="icon-instagram"></span>
+                        <span class="icon-facebook"></span>
+                        <span class="icon-whats"></span>
+                        <h6 class="mt-5">@Sesc_ERP / Senac ERP / (55) 1234-5678</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-center"></div>
+            <div class="card-right3 d-inline">
+                <div class="col">
+                    <div class="cards-footer d-flex">
+                        <span class="icon-local"></span>
+                        <p class="ml-5">Rua das Inovações, N 23, Cidade Futura, Terra Nova;</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards-footer d-flex mt-5">
+                        <span class="icon-globo"></span>
+                        <p class="ml-5">Brasil</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards-footer d-flex mt-5">
+                        <span class="icon-clips"></span>
+                        <p class="ml-5">www.senac.ERP.com.br</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="cards-footer d-flex mt-5">
+                        <span class="icon-okay"></span>
+                        <p class="ml-5">Sua segurança em primeiro lugar</p>
+                    </div>
+                </div>
+            </div>
     </footer>
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
