@@ -4,10 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vendedorescadastro</title>
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <title>Cadastro Produtos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/cadastrarvendedor.css">
     <link rel="stylesheet" href="../../assets/css/icomoon.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 </head>
 
 <body>
@@ -55,11 +68,9 @@
                                 <li><a class="dropdown-item text-primary"
                                         href="./indexcadastrodoclienteFornecedor.html">Clientes e Fornecedores</a>
                                 </li>
-                                <li><a class="dropdown-item text-primary"
-                                        href="./indexcadastrodoproduto.html">Produtos</a></li>
-                                <li><a class="dropdown-item text-primary"
-                                        href="./indexcadastrovendedores.html">Vendedores</a></li>
-                                <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a>
+                                <li><a class="dropdown-item text-primary" href="./indexcadastrodoproduto.html">Produtos</a></li>
+                                <li><a class="dropdown-item text-primary" href="./indexcadastrovendedores.html">Vendedores</a></li>
+                                <li><a class="dropdown-item text-primary" href="./relatoriodeestoque.html">Relatórios de Estoque</a>
                                 </li>
                             </ul>
                         </li>
@@ -73,7 +84,7 @@
                                         de estoque</a></li>
                                 <li><a class="dropdown-item text-primary" href="./indexpedidodecompra.html">Pedidos
                                         de compra</a></li>
-                                <li><a class="dropdown-item text-primary" href="./relatorio.html">Relatórios</a>
+                                <li><a class="dropdown-item text-primary" href="./relatoriodeprodutos.html">Relatórios de Produtos</a>
                                 </li>
                             </ul>
                         </li>
@@ -86,198 +97,141 @@
         </nav>
     </header>
     <main>
-        <div class="container mt-5">
-            <h2>Cadastro de Vendedores</h2>
-            <div class="d-flex justify-content-between mb-3">
-                <div>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#exampleModal">Adicionar</button>
-                    <button type="button" class="btn btn-secondary">Imprimir</button>
-                </div>
-                <input type="text" class="form-control w-25" placeholder="Pesquisar">
+        <div>
+            <!-- Cadastro de vendedor-->
+            <div class="container mt-5">
+                <h2>Cadastro de vendedores</h2>
+                <!-- Botão de adicionar -->
+                <button id="addBtn" class="btn btn-primary mb-3 mt-2" data-toggle="modal"
+                    data-target="#customPromptModal">Adicionar Vendedor</button>
+                <!-- Tabela -->
+                <table id="clientes" class="display table table-striped mt-5">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>CPF/CNPJ</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Luiz</td>
+                            <td>15</td>
+                            <td>216.213.861-06</td>
+                            <td>
+                                <button class="btn border-0 btn-edit">
+                                    <span class="icon-lapis border-0"></span>
+                                </button>
+                                <button class="btn border-0 btn-delete">
+                                    <span class="icon-lixo"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ana</td>
+                            <td>22</td>
+                            <td>216.213.861-06</td>
+                            <td>
+                                <button class="btn border-0 btn-edit">
+                                    <span class="icon-lapis border-0"></span>
+                                </button>
+                                <button class="btn border-0 btn-delete">
+                                    <span class="icon-lixo"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ana</td>
+                            <td>22</td>
+                            <td>216.213.861-06</td>
+                            <td>
+                                <button class="btn border-0 btn-edit">
+                                    <span class="icon-lapis border-0"></span>
+                                </button>
+                                <button class="btn border-0 btn-delete">
+                                    <span class="icon-lixo"></span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <table class="table table-striped">
-                <thead class="thead-dark">
-                    <tr>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>E-mail</th>
-                        <th>CPF/CNPJ</th>
-                        <th>Setor</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>João Silva</td>
-                        <td>(11) 1234-5678</td>
-                        <td>joaosilva45@gmail.com</td>
-                        <td>123.154.697-15</td>
-                        <td>RH</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>João Silva</td>
-                        <td>(11) 1234-5678</td>
-                        <td>joaosilva45@gmail.com</td>
-                        <td>123.154.697-15</td>
-                        <td>RH</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>João Silva</td>
-                        <td>(11) 1234-5678</td>
-                        <td>joaosilva45@gmail.com</td>
-                        <td>123.154.697-15</td>
-                        <td>RH</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>João Silva</td>
-                        <td>(11) 1234-5678</td>
-                        <td>joaosilva45@gmail.com</td>
-                        <td>123.154.697-15</td>
-                        <td>RH</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>João Silva</td>
-                        <td>(11) 1234-5678</td>
-                        <td>joaosilva45@gmail.com</td>
-                        <td>123.154.697-15</td>
-                        <td>RH</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>João Silva</td>
-                        <td>(11) 1234-5678</td>
-                        <td>joaosilva45@gmail.com</td>
-                        <td>123.154.697-15</td>
-                        <td>RH</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>João Silva</td>
-                        <td>(11) 1234-5678</td>
-                        <td>joaosilva45@gmail.com</td>
-                        <td>123.154.697-15</td>
-                        <td>RH</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>João Silva</td>
-                        <td>(11) 1234-5678</td>
-                        <td>joaosilva45@gmail.com</td>
-                        <td>123.154.697-15</td>
-                        <td>RH</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>João Silva</td>
-                        <td>(11) 1234-5678</td>
-                        <td>joaosilva45@gmail.com</td>
-                        <td>123.154.697-15</td>
-                        <td>RH</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>João Silva</td>
-                        <td>(11) 1234-5678</td>
-                        <td>joaosilva45@gmail.com</td>
-                        <td>123.154.697-15</td>
-                        <td>RH</td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>João Silva</td>
-                        <td>(11) 1234-5678</td>
-                        <td>joaosilva45@gmail.com</td>
-                        <td>123.154.697-15</td>
-                        <td>RH</td>
-                    </tr>
-                </tbody>
-            </table>
+            <script src="../js/DataTest.js"></script>
         </div>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        </div>
+        <!-- Modal Adicionar vendedor -->
+        <div class="modal fade" id="customPromptModal" tabindex="-1" aria-labelledby="customPromptModalLabel"
             aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Informações do Vendedor</h5>
+                        <h5 class="modal-title" id="customPromptModalLabel">Novo Vendedor</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                        <!-- Formulário Adicionar Vendedor -->
                         <form>
                             <h6>INFORMAÇÕES BÁSICAS</h6>
-                            <div class="form-row">
+                                <div class="form-row">
                                 <div class="form-group col-md-10">
-                                    <label for="nome-completo">Nome completo</label>
-                                    <input type="text" class="form-control" id="nome-completo">
+                                    <label for="nome-fornecedor">Nome completo</label>
+                                    <input type="text" class="form-control" id="nome-fornecedor">
                                 </div>
                                 <div class="form-group col-md-10">
-                                    <label for="cpf-cnpj">CPF/CNPJ</label>
-                                    <input type="text" class="form-control" id="cpf-cnpj">
+                                    <label for="cpf-cnpj-fornecedor">CPF/CNPJ</label>
+                                    <input type="text" class="form-control" id="cpf-cnpj-fornecedor">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-10">
-                                    <label for="telefone">Telefone</label>
-                                    <input type="text" class="form-control" id="telefone">
+                                    <label for="telefone-fornecedor">Telefone</label>
+                                    <input type="text" class="form-control" id="telefone-fornecedor">
                                 </div>
                                 <div class="form-group col-md-10">
-                                    <label for="email">E-mail</label>
-                                    <input type="email" class="form-control" id="email">
+                                    <label for="email-fornecedor">E-mail</label>
+                                    <input type="email" class="form-control" id="email-fornecedor">
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-10">
-                                        <label for="Setor">Setor</label>
-                                        <input type="text" class="form-control" id="setor">
+                                        <label for="setor-fornecedor">Setor</label>
+                                        <input type="text" class="form-control" id="setor-fornecedor">
                                     </div>
                                 </div>
-                                <h6>ENDEREÇO</h6>
-                                <div class="form-row">
-                                    <div class="form-group col-md-10">
-                                        <label for="rua">Rua</label>
-                                        <input type="text" class="form-control" id="rua">
-                                    </div>
-                                    <div class="form-group col-md-10">
-                                        <label for="numero">Nº</label>
-                                        <input type="text" class="form-control" id="numero">
-                                    </div>
+                            </div>
+                            <h6>ENDEREÇO</h6>
+                            <div class="form-row">
+                                <div class="form-group col-md-10">
+                                    <label for="rua-fornecedor">Rua</label>
+                                    <input type="text" class="form-control" id="rua-fornecedor">
                                 </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-10">
-                                        <label for="bairro">Bairro</label>
-                                        <input type="text" class="form-control" id="bairro">
-                                    </div>
-                                    <div class="form-group col-md-10">
-                                        <label for="cep">CEP</label>
-                                        <input type="text" class="form-control" id="cep">
-                                    </div>
-                                    <div class="form-group col-md-10">
-                                        <label for="uf">UF</label>
-                                        <input type="text" class="form-control" id="uf">
-                                    </div>
+                                <div class="form-group col-md-10">
+                                    <label for="numero-fornecedor">Nº</label>
+                                    <input type="text" class="form-control" id="numero-fornecedor">
                                 </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-10">
-                                        <label for="cidade">Cidade</label>
-                                        <input type="text" class="form-control" id="cidade">
-                                    </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-10">
+                                    <label for="bairro-fornecedor">Bairro</label>
+                                    <input type="text" class="form-control" id="bairro-fornecedor">
                                 </div>
+                                <div class="form-group col-md-10">
+                                    <label for="cep-fornecedor">CEP</label>
+                                    <input type="text" class="form-control" id="cep-fornecedor">
+                                </div>
+                                <div class="form-group col-md-10">
+                                    <label for="uf-fornecedor">UF</label>
+                                    <input type="text" class="form-control" id="uf-fornecedor">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-10">
+                                    <label for="cidade-fornecedor">Cidade</label>
+                                    <input type="text" class="form-control" id="cidade-fornecedor">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Adicionar</button>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Salvar</button>
                     </div>
                 </div>
             </div>
@@ -325,7 +279,12 @@
                 </div>
             </div>
     </footer>
-    <script src="../../src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <script src="../../src/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
